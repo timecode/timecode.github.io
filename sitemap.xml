@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://timecode.github.io/blog/archives/</loc>
+        <loc>http://blog.shadowcryptic.com/blog/archives/</loc>
         <lastmod>2014-03-16T00:25:26+00:00</lastmod>
     </url>
     <url>
-        <loc>http://timecode.github.io/</loc>
+        <loc>http://blog.shadowcryptic.com/</loc>
         <lastmod>2014-03-16T00:40:13+00:00</lastmod>
     </url>
     <url>
-        <loc>http://timecode.github.io/robots.txt</loc>
+        <loc>http://blog.shadowcryptic.com/robots.txt</loc>
         <lastmod>2014-03-16T00:25:26+00:00</lastmod>
     </url>
 </urlset>

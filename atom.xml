@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://timecode.github.io/atom.xml" rel="self"/>
-  <link href="http://timecode.github.io/"/>
-  <updated>2014-03-16T00:40:30+00:00</updated>
-  <id>http://timecode.github.io/</id>
+  <title><![CDATA[shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-16T00:49:12+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Rob Playford]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
