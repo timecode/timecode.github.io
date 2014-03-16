@@ -7,12 +7,10 @@
 	<meta name="author" content="Rob Playford">
 
 	
-	<meta name="description" content="See Sharing Code Snippets Syntax ``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
-code snippet
-``` Or 1
-2
-3
-&#123;% &hellip;">
+	<meta name="description" content="See Sharing Code Snippets
+And Markdown syntax
+GitHub Flavored Markdown syntax
+Markdown Extra Syntax ``` [language] [title] [url] [link text] [ &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -96,7 +94,15 @@ code snippet
 			Markdown Notes</a>
 	</h2>
 	<div class="entry-content">
-		<p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></p>
+		<p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a>
+And</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
+<li><a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a></li>
+</ul>
+
 
 <h3>Syntax</h3>
 
@@ -191,6 +197,626 @@ end
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2014/03/15/markdown-cheatsheet/">
+		
+			Markdown Cheatsheet</a>
+	</h2>
+	<div class="entry-content">
+		<p>See <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
+
+<p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber&rsquo;s original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
+
+<p>Note that there is also a <a href="./Markdown-Here-Cheatsheet">Cheatsheet specific to Markdown Here</a> if that&rsquo;s what you&rsquo;re looking for.</p>
+
+<p>You can play around with Markdown on our <a href="http://www.markdown-here.com/livedemo.html">live demo page</a>.</p>
+
+<h5>Table of Contents</h5>
+
+<p><a href="#headers">Headers</a><br/>
+<a href="#emphasis">Emphasis</a><br/>
+<a href="#lists">Lists</a><br/>
+<a href="#links">Links</a><br/>
+<a href="#images">Images</a><br/>
+<a href="#code">Code and Syntax Highlighting</a><br/>
+<a href="#tables">Tables</a><br/>
+<a href="#blockquotes">Blockquotes</a><br/>
+<a href="#html">Inline HTML</a><br/>
+<a href="#hr">Horizontal Rule</a><br/>
+<a href="#lines">Line Breaks</a><br/>
+<a href="#videos">Videos</a></p>
+
+<p><a name="headers"></a></p>
+
+<h2>Headers</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># H1
+</span><span class='line'>## H2
+</span><span class='line'>### H3
+</span><span class='line'>#### H4
+</span><span class='line'>##### H5
+</span><span class='line'>###### H6
+</span><span class='line'>
+</span><span class='line'>Alternatively, for H1 and H2, an underline-ish style:
+</span><span class='line'>
+</span><span class='line'>Alt-H1
+</span><span class='line'>======
+</span><span class='line'>
+</span><span class='line'>Alt-H2
+</span><span class='line'>------</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<h4>H4</h4>
+
+<h5>H5</h5>
+
+<h6>H6</h6>
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+<h1>Alt-H1</h1>
+
+<h2>Alt-H2</h2>
+
+<p><a name="emphasis"></a></p>
+
+<h2>Emphasis</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Emphasis, aka italics, with *asterisks* or _underscores_.
+</span><span class='line'>
+</span><span class='line'>Strong emphasis, aka bold, with **asterisks** or __underscores__.
+</span><span class='line'>
+</span><span class='line'>Combined emphasis with **asterisks and _underscores_**.
+</span><span class='line'>
+</span><span class='line'>Strikethrough uses two tildes. ~~Scratch this.~~</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<p><a name="lists"></a></p>
+
+<h2>Lists</h2>
+
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. First ordered list item
+</span><span class='line'>2. Another item
+</span><span class='line'>⋅⋅* Unordered sub-list. 
+</span><span class='line'>1. Actual numbers don't matter, just that it's a number
+</span><span class='line'>⋅⋅1. Ordered sub-list
+</span><span class='line'>4. And another item.
+</span><span class='line'>
+</span><span class='line'>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+</span><span class='line'>
+</span><span class='line'>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+</span><span class='line'>⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+</span><span class='line'>⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+</span><span class='line'>
+</span><span class='line'>* Unordered list can use asterisks
+</span><span class='line'>- Or minuses
+</span><span class='line'>+ Or pluses</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>First ordered list item</li>
+<li>Another item</li>
+<li>Unordered sub-list.</li>
+<li>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number</li>
+<li> Ordered sub-list</li>
+<li><p>And another item.</p>
+
+<p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p>
+
+<p>To have a line break without a paragraph, you will need to use two trailing spaces.<br/>
+Note that this line is separate, but within the same paragraph.<br/>
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p></li>
+<li><p>Unordered list can use asterisks</p></li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ol>
+
+
+<p><a name="links"></a></p>
+
+<h2>Links</h2>
+
+<p>There are two ways to create links.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[I'm an inline-style link](https://www.google.com)
+</span><span class='line'>
+</span><span class='line'>[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+</span><span class='line'>
+</span><span class='line'>[I'm a reference-style link][Arbitrary case-insensitive reference text]
+</span><span class='line'>
+</span><span class='line'>[I'm a relative reference to a repository file](../blob/master/LICENSE)
+</span><span class='line'>
+</span><span class='line'>[You can use numbers for reference-style link definitions][1]
+</span><span class='line'>
+</span><span class='line'>Or leave it empty and use the [link text itself]
+</span><span class='line'>
+</span><span class='line'>Some text to show that the reference links can follow later.
+</span><span class='line'>
+</span><span class='line'>[arbitrary case-insensitive reference text]: https://www.mozilla.org
+</span><span class='line'>[1]: http://slashdot.org
+</span><span class='line'>[link text itself]: http://www.reddit.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p><a name="images"></a></p>
+
+<h2>Images</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Here's our logo (hover to see the title text):
+</span><span class='line'>
+</span><span class='line'>Inline-style: 
+</span><span class='line'>![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+</span><span class='line'>
+</span><span class='line'>Reference-style: 
+</span><span class='line'>![alt text][logo]
+</span><span class='line'>
+</span><span class='line'>[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt text" /></p>
+
+<p><a name="code"></a></p>
+
+<h2>Code and Syntax Highlighting</h2>
+
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn&rsquo;t. However, many renderers &mdash; like Github&rsquo;s and <em>Markdown Here</em> &mdash; support syntax highlighting. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Inline `code` has `back-ticks around` it.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks &mdash; they&rsquo;re easier and only they support syntax highlighting.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ```javascript
+</span><span class='line'> var s = "JavaScript syntax highlighting";
+</span><span class='line'> alert(s);
+</span><span class='line'> ```
+</span><span class='line'> 
+</span><span class='line'> ```python
+</span><span class='line'> s = "Python syntax highlighting"
+</span><span class='line'> print s
+</span><span class='line'> ```
+</span><span class='line'> 
+</span><span class='line'> ```
+</span><span class='line'> No language indicated, so no syntax highlighting. 
+</span><span class='line'> But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</span><span class='line'> ```</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;JavaScript syntax highlighting&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Python syntax highlighting&quot;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">s</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">No</span> <span class="n">language</span> <span class="n">indicated</span><span class="p">,</span> <span class="n">so</span> <span class="n">no</span> <span class="n">syntax</span> <span class="n">highlighting</span> <span class="ow">in</span> <span class="n">Markdown</span> <span class="n">Here</span> <span class="p">(</span><span class="n">varies</span> <span class="n">on</span> <span class="n">Github</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'><span class="n">But</span> <span class="n">let</span><span class="s">&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Github Wiki pages don&rsquo;t seem to support syntax highlighting, so the above won&rsquo;t be colourful (the strings are not red, for example). Try it out in a <em>Markdown Here</em> email or a Github Markdown README or Github Issue &mdash; you can preview a new Issue without submitting it.)</p>
+
+<p>Again, to see what languages are available for highlighting, and how to write those language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<p><a name="tables"></a></p>
+
+<h2>Tables</h2>
+
+<p>Tables aren&rsquo;t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email &mdash; a task that would otherwise require copy-pasting from another application.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Colons</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">align</span> <span class="n">columns</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">|</span> <span class="n">Tables</span>        <span class="o">|</span> <span class="n">Are</span>           <span class="o">|</span> <span class="n">Cool</span>  <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="o">-------------</span> <span class="o">|</span><span class="p">:</span><span class="o">-------------</span><span class="p">:</span><span class="o">|</span> <span class="o">-----</span><span class="p">:</span><span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">col</span> <span class="mi">3</span> <span class="ow">is</span>      <span class="o">|</span> <span class="n">right</span><span class="o">-</span><span class="n">aligned</span> <span class="o">|</span> <span class="err">$</span><span class="mi">1600</span> <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">col</span> <span class="mi">2</span> <span class="ow">is</span>      <span class="o">|</span> <span class="n">centered</span>      <span class="o">|</span>   <span class="err">$</span><span class="mi">12</span> <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">zebra</span> <span class="n">stripes</span> <span class="o">|</span> <span class="n">are</span> <span class="n">neat</span>      <span class="o">|</span>    <span class="err">$</span><span class="mi">1</span> <span class="o">|</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">The</span> <span class="n">outer</span> <span class="n">pipes</span> <span class="p">(</span><span class="o">|</span><span class="p">)</span> <span class="n">are</span> <span class="n">optional</span><span class="p">,</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">don</span><span class="s">&#39;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Markdown</span> <span class="o">|</span> <span class="n">Less</span> <span class="o">|</span> <span class="n">Pretty</span>
+</span><span class='line'><span class="o">---</span> <span class="o">|</span> <span class="o">---</span> <span class="o">|</span> <span class="o">---</span>
+</span><span class='line'><span class="o">*</span><span class="n">Still</span><span class="o">*</span> <span class="o">|</span> <span class="sb">`renders`</span> <span class="o">|</span> <span class="o">**</span><span class="n">nicely</span><span class="o">**</span>
+</span><span class='line'><span class="mi">1</span> <span class="o">|</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">3</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Colons can be used to align columns.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> Tables        </th>
+<th align="center"> Are           </th>
+<th align="right"> Cool </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> col 3 is      </td>
+<td align="center"> right-aligned </td>
+<td align="right"> $1600 |</td>
+</tr>
+<tr>
+<td></td>
+<td> col 2 is      </td>
+<td align="center"> centered      </td>
+<td align="right">   $12 |</td>
+</tr>
+<tr>
+<td></td>
+<td> zebra stripes </td>
+<td align="center"> are neat      </td>
+<td align="right">    $1 |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The outer pipes (|) are optional, and you don&rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table>
+<thead>
+<tr>
+<th>Markdown </th>
+<th> Less </th>
+<th> Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em> </td>
+<td> <code>renders</code> </td>
+<td> <strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 2 </td>
+<td> 3</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><a name="blockquotes"></a></p>
+
+<h2>Blockquotes</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;</span> <span class="n">Blockquotes</span> <span class="n">are</span> <span class="n">very</span> <span class="n">handy</span> <span class="ow">in</span> <span class="n">email</span> <span class="n">to</span> <span class="n">emulate</span> <span class="n">reply</span> <span class="n">text</span><span class="o">.</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="n">This</span> <span class="n">line</span> <span class="ow">is</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">same</span> <span class="n">quote</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Quote</span> <span class="k">break</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">very</span> <span class="nb">long</span> <span class="n">line</span> <span class="n">that</span> <span class="n">will</span> <span class="n">still</span> <span class="n">be</span> <span class="n">quoted</span> <span class="n">properly</span> <span class="n">when</span> <span class="n">it</span> <span class="n">wraps</span><span class="o">.</span> <span class="n">Oh</span> <span class="n">boy</span> <span class="n">let</span><span class="s">&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+<p>Quote break.</p>
+
+<blockquote><p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p></blockquote>
+
+<p><a name="html"></a></p>
+
+<h2>Inline HTML</h2>
+
+<p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;</span><span class="n">dl</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="n">dt</span><span class="o">&gt;</span><span class="n">Definition</span> <span class="nb">list</span><span class="o">&lt;/</span><span class="n">dt</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="n">dd</span><span class="o">&gt;</span><span class="n">Is</span> <span class="n">something</span> <span class="n">people</span> <span class="n">use</span> <span class="n">sometimes</span><span class="o">.&lt;/</span><span class="n">dd</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">&lt;</span><span class="n">dt</span><span class="o">&gt;</span><span class="n">Markdown</span> <span class="ow">in</span> <span class="n">HTML</span><span class="o">&lt;/</span><span class="n">dt</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="n">dd</span><span class="o">&gt;</span><span class="n">Does</span> <span class="o">*</span><span class="ow">not</span><span class="o">*</span> <span class="n">work</span> <span class="o">**</span><span class="n">very</span><span class="o">**</span> <span class="n">well</span><span class="o">.</span> <span class="n">Use</span> <span class="n">HTML</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">tags</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;.&lt;/</span><span class="n">dd</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">dl</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+
+<p><a name="hr"></a></p>
+
+<h2>Horizontal Rule</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Three</span> <span class="ow">or</span> <span class="n">more</span><span class="o">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">---</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Hyphens</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">***</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Asterisks</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">___</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Underscores</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Three or more&hellip;</p>
+
+<hr />
+
+<p>Hyphens</p>
+
+<hr />
+
+<p>Asterisks</p>
+
+<hr />
+
+<p>Underscores</p>
+
+<p><a name="lines"></a></p>
+
+<h2>Line Breaks</h2>
+
+<p>My basic recommendation for learning how line breaks work is to experiment and discover &mdash; hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&rsquo;ll soon learn to get what you want. &ldquo;Markdown Toggle&rdquo; is your friend.</p>
+
+<p>Here are some things to try out:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Here</span><span class="s">&#39;s a line for us to start with.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">This</span> <span class="n">line</span> <span class="ow">is</span> <span class="n">separated</span> <span class="kn">from</span> <span class="nn">the</span> <span class="nn">one</span> <span class="nn">above</span> <span class="nn">by</span> <span class="nn">two</span> <span class="nn">newlines</span><span class="p">,</span> <span class="n">so</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">a</span> <span class="o">*</span><span class="n">separate</span> <span class="n">paragraph</span><span class="o">*.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">This</span> <span class="n">line</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">paragraph</span><span class="p">,</span> <span class="n">but</span><span class="o">...</span>
+</span><span class='line'><span class="n">This</span> <span class="n">line</span> <span class="ow">is</span> <span class="n">only</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">a</span> <span class="n">single</span> <span class="n">newline</span><span class="p">,</span> <span class="n">so</span> <span class="n">it</span><span class="s">&#39;s a separate line in the *same paragraph*.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also begins a separate paragraph, but&hellip;<br/>
+This line is only separated by a single newline, so it&rsquo;s a separate line in the <em>same paragraph</em>.</p>
+
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there&rsquo;s no need to use MD&rsquo;s two-space line breaks.)</p>
+
+<p><a name="videos"></a></p>
+
+<h2>Videos</h2>
+
+<p>Use HTML to embed&hellip;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s">&quot;360&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;//www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE?feature=player_detailpage&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/hFHmYFlbFn8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Or, in pure Markdown, where they can&rsquo;t be added directly, you can add an image with a link to the video like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="p">[</span><span class="err">!</span><span class="p">[</span><span class="n">IMAGE</span> <span class="n">ALT</span> <span class="n">TEXT</span> <span class="n">HERE</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">img</span><span class="o">.</span><span class="n">youtube</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vi</span><span class="o">/</span><span class="n">YOUTUBE_VIDEO_ID_HERE</span><span class="o">/</span><span class="mf">0.j</span><span class="n">pg</span><span class="p">)](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">youtube</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">watch</span><span class="err">?</span><span class="n">v</span><span class="o">=</span><span class="n">YOUTUBE_VIDEO_ID_HERE</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://www.youtube.com/watch?v=hFHmYFlbFn8"><img src="http://img.youtube.com/vi/hFHmYFlbFn8/0.jpg" alt="Transforming Formula One: 2014 Rules Explained (Full Version)" /></a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-15T13:00:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2014/03/14/new-ocotopress-themes/">
 		
 			New Ocotopress Themes</a>
@@ -250,12 +876,9 @@ end
 	<div class="entry-content">
 		<h2>Install</h2>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'><span class="nv">$ </span>mate octopress/Gemfile
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
+$ mate octopress/Gemfile
+</code></pre>
 
 <p>Add rvm ruby version and gemset to top of Gemfile, for example:</p>
 
@@ -276,81 +899,63 @@ end
 
 <p>Move into the directory and pull it up in an editor</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
-</span><span class='line'><span class="nv">$ </span>mate ./
-</span><span class='line'><span class="nv">$ </span>bundle install
-</span><span class='line'><span class="nv">$ </span>rake install
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ cd octopress
+$ mate ./
+$ bundle install
+$ rake install
+</code></pre>
 
 <h2>Basic usage</h2>
 
 <p>When working on the site locally, run</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake watch
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ rake watch
+</code></pre>
 
 <p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
 
-<p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>)</p>
+<p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>) <br/>
+<strong>Power Tip</strong>: I have an alias in my <code>~/.bash_rc</code> file to automate the pow setup:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># see gotcha (below)</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code>alias pow='ln -is `pwd` ~/.pow/${PWD##*/} &amp;&amp; open http://${PWD##*/}.dev'
+</code></pre>
 
+<p>With that alias I simply enter the command:</p>
+
+<pre><code>$ pow             # see gotcha (below)
+</code></pre>
 
 <p><em><strong>Gotcha</strong>: Despite the <code>Gemfile</code> being used (above) to switch to the correct rvm and gemset, I &lsquo;sometimes&rsquo; have to add the old <code>.rvmrc</code> file before Pow will serve the site, for example:</em></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat .rvmrc <span class="s">&lt;&lt; rvm use 2.1.1@octopress</span>
-</span><span class='line'><span class="s">$ rvm</span> rvmrc trust
-</span><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># pow now works every time :-/</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ cat .rvmrc &lt;&lt; rvm use 2.1.1@octopress
+$ rvm rvmrc trust
+$ pow             # pow now serves without falling over :-/
+</code></pre>
 
 <p>Add new posts with</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ rake new_post["title"]
+</code></pre>
 
 <p>or a page with</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>page-title<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ rake new_page[page-title]
+</code></pre>
 
 <p>To generate the blog before sending off to the hosting site:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake generate
-</span><span class='line'><span class="nv">$ </span>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ rake generate
+$ rake deploy
+</code></pre>
 
 <p><em>This copies the generated files into _deploy/, adds them to git, then commits and pushes them up to the master branch where they will be published on GitHub Pages</em></p>
 
 <p><strong>NOTE</strong>: Don&rsquo;t forget to commit the source! <em>That&rsquo;s all the code in the source repo.</em></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git add -all
-</span><span class='line'><span class="nv">$ </span>git commit -m <span class="s1">&#39;your message&#39;</span>
-</span><span class='line'><span class="nv">$ </span>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ git add -all
+$ git commit -m 'your message'
+$ git push origin source
+</code></pre>
 
 <p><strong>NOTE</strong>: In order to split the hosting and repo after the initial install (following the octopress docs) I had to remove the origin with <code>$ git remote rm origin</code> before adding the current bitbucket one.</p>
 
@@ -374,8 +979,6 @@ end
 <p>Especially:</p>
 
 <ul>
-<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
-<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
 <li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
 <li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
 <li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
@@ -402,6 +1005,144 @@ end
 
 
 <time datetime="2014-03-14T10:00:00+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/03/13/scriptogram/">
+		
+			Scriptogram</a>
+	</h2>
+	<div class="entry-content">
+		<p>Date: 2014-03-13 11:00
+Title: This is your blog, delivered by scriptogr.am</p>
+
+<p>Thank you for using scriptogr.am. We hope you’ll enjoy the app. It’s designed to be fast, simple and to get the most creativity out of you.</p>
+
+<p>scriptogr.am uses <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>, a lightweight markup language, originally created by <a href="http://daringfireball.net/" title="Daring Fireball">John Gruber</a> and <a href="http://www.aaronsw.com/" title="Aaron Swartz">Aaron Swartz</a>. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). See the <a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax">Syntax</a> page for details pertaining to Markdown’s formatting syntax. You can try it out, right now, using the online <a href="http://daringfireball.net/projects/markdown/dingus" title="Dingus">Dingus</a>.
+scriptogr.am has also implemented support for features currently not available with the plain Markdown syntax. Read more in the <a href="http://michelf.ca/projects/php-markdown/extra/" title="documentation">documentation</a>.
+Note that these features are experimental, so we can&rsquo;t guarantee that they will always remain.</p>
+
+<h1>Getting started</h1>
+
+<p>After connecting your Dropbox account to scriptogr.am, some necessary files and folders are added to your Dropbox at <code>Apps/scriptogram</code>. First the <em>GET_STARTED.txt</em> text file that pretty much explains the exact same as what you’re reading now. Next, we’ve added a <code>posts</code> folder. This is where you add your blog <em>post</em> (&amp; <em>page</em>) files. These files are plain textfiles, but needs to be saved with the .md (markdown) extension like this: <em>yourfile.md</em></p>
+
+<p><img src="http://dl.dropbox.com/u/35476/_scriptogram/folder.png" alt="" /></p>
+
+<p>Please use standard, non foreign filenames. Dropbox sometimes have problem syncing filenames that contains invalid HTML characters.
+We’ve added a post example page (this file) there for you to get familiar with.</p>
+
+<h2>The template data</h2>
+
+<p>All files needs to contain &ldquo;front block&rdquo;. The front block must be the first thing in the file and takes the form of:</p>
+
+<pre><code>Date: 2012-04-17
+Title: My first post
+</code></pre>
+
+<p>You can set any of the predefined variables (see below for a reference). But, the <em>Title</em> is required. Without the title, the system will fail.</p>
+
+<h3>Predefined global variables</h3>
+
+<p><em>All the variable names below are case-sensitive:</em></p>
+
+<p><code>Required:</code></p>
+
+<pre><code>Title
+</code></pre>
+
+<p>The title of your post (or page)</p>
+
+<p><code>Not required, but close to:</code></p>
+
+<pre><code>Date
+</code></pre>
+
+<p>The following date format is the correct one to use: <em>2011-12-31 12:31</em> or <em>2011-12-31</em>.
+(The <em>Date</em> variable can be used to ensure correct sorting of posts.)</p>
+
+<p><code>Optional:</code></p>
+
+<pre><code>Published
+</code></pre>
+
+<p>Set to ’false’ if you don’t want a post to show up when the site is generated.</p>
+
+<pre><code>Type
+</code></pre>
+
+<p>Set to ’page’ if you wan’t the post to act as a ’page’ instead of a ’post’.</p>
+
+<pre><code>Slug
+</code></pre>
+
+<p>Custom permalink (replaces the auto generated url based on the &ldquo;Title:&rdquo; variable), especially useful if titles tend to be long or they change frequently. E.g ’my-custom-permalink-url’</p>
+
+<pre><code>Link
+</code></pre>
+
+<p>Links the &ldquo;post&rdquo; or &ldquo;page&rdquo; title to an external source. E.g ’<a href="http://google.com%E2%80%99">http://google.com%E2%80%99</a></p>
+
+<pre><code>Tags
+</code></pre>
+
+<p>Add tags to your posts and pages. Comma separated words. Once added, scriptogr.am will transform all tags to valid basic HTML characters.</p>
+
+<pre><code>Excerpt
+</code></pre>
+
+<p>Add an excerpt<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> to your post or page.</p>
+
+<h2>Difference between ’posts’ and ’pages’</h2>
+
+<p>A <code>post</code> is a blog post.</p>
+
+<p>A <code>page</code> is a similar as a <em>post</em>, but generates a link visible in the <em>menu</em> on your site that will lean to a page permalink.</p>
+
+<h2>Publishing your posts</h2>
+
+<p>This is simple. Just head to your admin panel and hit the ”Synchronize” button, or enable autosync in your settings. When logged in to scriptogr.am and visiting your own page, you’ll see the scriptogr.am logotype symbol on the top right of the browser window. This is the link that leads to your admin panel.</p>
+
+<h2>Published vs Draft</h2>
+
+<p>There are two ways to mark posts and pages as drafts or published. The first way is to use the draft folder. Everything you put here will be treated as draft, and everything you put direct under the posts folder will be treated as published. The ”Publish” and ”Draft” buttons in the dashboard handles these file locations for you. You can also use the Published variable, mentioned above. The Published variable will ALWAYS take precedence over the file location.</p>
+
+<p><strong>Finally,</strong> happy posting. If you have any questions, suggestions or thoughts just drop us an <a href="mailto:info@scriptogr.am">e-mail</a> at any time.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>An <a href="http://en.wikipedia.org/wiki/Excerpt" title="Excerpt on Wikipedia">excerpt</a> is a relatively small sample passage from a longer work, such as a book or article.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-13T11:00:00+00:00" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 </div>

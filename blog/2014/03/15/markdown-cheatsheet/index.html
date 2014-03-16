@@ -1,104 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[shadowcryptic#blog]]></title>
-  <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
-  <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-16T23:24:32+00:00</updated>
-  <id>http://blog.shadowcryptic.com/</id>
-  <author>
-    <name><![CDATA[Rob Playford]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Markdown Cheatsheet - shadowcryptic#blog</title>
+	<meta name="author" content="Rob Playford">
 
-  
-  <entry>
-    <title type="html"><![CDATA[markdown notes]]></title>
-    <link href="http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes/"/>
-    <updated>2014-03-16T11:27:22+00:00</updated>
-    <id>http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes</id>
-    <content type="html"><![CDATA[<p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a>
-And</p>
+	
+	<meta name="description" content="See Markdown Cheatsheet This is intended as a quick reference and showcase. For more complete info, see John Gruber&rsquo;s original spec and the &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<ul>
-<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
-<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
-<li><a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a></li>
+	<link href="/atom.xml" rel="alternate" title="shadowcryptic#blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">shadowcryptic#blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
 </ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/+RobPlayford1?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/timecode" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/timecode" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+	</form>
+</nav>
 
-
-<h3>Syntax</h3>
-
-<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
-code snippet
-```
-</code></pre>
-
-<p>Or</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %&#125;
-</span><span class='line'>code snippet
-</span><span class='line'>&#123;% endcodeblock %&#125;</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>A ruby example</h3>
-
-<pre><code>``` ruby a ruby example
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-</code></pre>
-
-<p>produces</p>
-
-<figure class='code'><figcaption><span>a ruby example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
-</span><span class='line'><span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Another ruby example with extras (NOT WORKING ???)</h3>
-
-<pre><code>``` ruby a ruby example Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article linenos:false start:51 mark:52,53-54
-class Fixnum
-  def prime?
-    ('1' * self) !~ /^1?$|^(11+?)\1+$/
-  end
-end
-```
-</code></pre>
-
-<p>produces</p>
-
-<figure class='code'><figcaption><span>a ruby example Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article linenos:false start:51 mark:52,53-54</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Markdown Cheatsheet]]></title>
-    <link href="http://blog.shadowcryptic.com/blog/2014/03/15/markdown-cheatsheet/"/>
-    <updated>2014-03-15T13:00:00+00:00</updated>
-    <id>http://blog.shadowcryptic.com/blog/2014/03/15/markdown-cheatsheet</id>
-    <content type="html"><![CDATA[<p>See <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Markdown Cheatsheet</h2>
+	<div class="entry-content"><p>See <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
 
 <p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber&rsquo;s original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
 
@@ -682,260 +666,73 @@ This line is only separated by a single newline, so it&rsquo;s a separate line i
 
 
 <p><a href="http://www.youtube.com/watch?v=hFHmYFlbFn8"><img src="http://img.youtube.com/vi/hFHmYFlbFn8/0.jpg" alt="Transforming Formula One: 2014 Rules Explained (Full Version)" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[new ocotopress themes]]></title>
-    <link href="http://blog.shadowcryptic.com/blog/2014/03/14/new-ocotopress-themes/"/>
-    <updated>2014-03-14T11:00:00+00:00</updated>
-    <id>http://blog.shadowcryptic.com/blog/2014/03/14/new-ocotopress-themes</id>
-    <content type="html"><![CDATA[<p>From the root directory:</p>
-
-<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
-
-<pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
-</code></pre>
-
-<p>Then install with the command:</p>
-
-<pre><code>$ rake install['slash']
-</code></pre>
-
-<p>To revert to the original &lsquo;classic&rsquo; theme:</p>
-
-<pre><code>$ rake install['classic']
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[octopress notes]]></title>
-    <link href="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/"/>
-    <updated>2014-03-14T10:00:00+00:00</updated>
-    <id>http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes</id>
-    <content type="html"><![CDATA[<h2>Install</h2>
-
-<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
-$ mate octopress/Gemfile
-</code></pre>
-
-<p>Add rvm ruby version and gemset to top of Gemfile, for example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
-</span><span class='line'>  <span class="n">ruby</span> <span class="s1">&#39;2.1.1&#39;</span>
-</span><span class='line'>  <span class="c1">#ruby-gemset=octopress</span>
-</span><span class='line'>  <span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span>
-</span><span class='line'>  <span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Move into the directory and pull it up in an editor</p>
-
-<pre><code>$ cd octopress
-$ mate ./
-$ bundle install
-$ rake install
-</code></pre>
-
-<h2>Basic usage</h2>
-
-<p>When working on the site locally, run</p>
-
-<pre><code>$ rake watch
-</code></pre>
-
-<p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
-
-<p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>) <br/>
-<strong>Power Tip</strong>: I have an alias in my <code>~/.bash_rc</code> file to automate the pow setup:</p>
-
-<pre><code>alias pow='ln -is `pwd` ~/.pow/${PWD##*/} &amp;&amp; open http://${PWD##*/}.dev'
-</code></pre>
-
-<p>With that alias I simply enter the command:</p>
-
-<pre><code>$ pow             # see gotcha (below)
-</code></pre>
-
-<p><em><strong>Gotcha</strong>: Despite the <code>Gemfile</code> being used (above) to switch to the correct rvm and gemset, I &lsquo;sometimes&rsquo; have to add the old <code>.rvmrc</code> file before Pow will serve the site, for example:</em></p>
-
-<pre><code>$ cat .rvmrc &lt;&lt; rvm use 2.1.1@octopress
-$ rvm rvmrc trust
-$ pow             # pow now serves without falling over :-/
-</code></pre>
-
-<p>Add new posts with</p>
-
-<pre><code>$ rake new_post["title"]
-</code></pre>
-
-<p>or a page with</p>
-
-<pre><code>$ rake new_page[page-title]
-</code></pre>
-
-<p>To generate the blog before sending off to the hosting site:</p>
-
-<pre><code>$ rake generate
-$ rake deploy
-</code></pre>
-
-<p><em>This copies the generated files into _deploy/, adds them to git, then commits and pushes them up to the master branch where they will be published on GitHub Pages</em></p>
-
-<p><strong>NOTE</strong>: Don&rsquo;t forget to commit the source! <em>That&rsquo;s all the code in the source repo.</em></p>
-
-<pre><code>$ git add -all
-$ git commit -m 'your message'
-$ git push origin source
-</code></pre>
-
-<p><strong>NOTE</strong>: In order to split the hosting and repo after the initial install (following the octopress docs) I had to remove the origin with <code>$ git remote rm origin</code> before adding the current bitbucket one.</p>
-
-<h2>What is Octopress?</h2>
-
-<p>Octopress is <a href="https://github.com/mojombo/jekyll">Jekyll</a> blogging at its finest.</p>
-
-<ol>
-<li><strong>Octopress sports a clean responsive theme</strong> written in semantic HTML5, focused on readability and friendliness toward mobile devices.</li>
-<li><strong>Code blogging is easy and beautiful.</strong> Embed code (with <a href="http://ethanschoonover.com/solarized">Solarized</a> styling) in your posts from gists, jsFiddle or from your filesystem.</li>
-<li><strong>Third party integration is simple</strong> with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.</li>
-<li><strong>It&rsquo;s easy to use.</strong> A collection of rake tasks simplifies development and makes deploying a cinch.</li>
-<li><strong>Ships with great plug-ins</strong> some original and others from the Jekyll community &mdash; tested and improved.</li>
-</ol>
-
-
-<h2>Documentation</h2>
-
-<p>Check out <a href="http://octopress.org/docs">Octopress.org</a> for guides and documentation.</p>
-
-<p>Especially:</p>
-
-<ul>
-<li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
-<li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
-<li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
-<li><a href="http://www.w3schools.com/charsets/ref_utf_basic_latin.asp">HTML Unicode UTF-8</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[scriptogram]]></title>
-    <link href="http://blog.shadowcryptic.com/blog/2014/03/13/scriptogram/"/>
-    <updated>2014-03-13T11:00:00+00:00</updated>
-    <id>http://blog.shadowcryptic.com/blog/2014/03/13/scriptogram</id>
-    <content type="html"><![CDATA[<p>Date: 2014-03-13 11:00
-Title: This is your blog, delivered by scriptogr.am</p>
-
-<p>Thank you for using scriptogr.am. We hope you’ll enjoy the app. It’s designed to be fast, simple and to get the most creativity out of you.</p>
-
-<p>scriptogr.am uses <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>, a lightweight markup language, originally created by <a href="http://daringfireball.net/" title="Daring Fireball">John Gruber</a> and <a href="http://www.aaronsw.com/" title="Aaron Swartz">Aaron Swartz</a>. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). See the <a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax">Syntax</a> page for details pertaining to Markdown’s formatting syntax. You can try it out, right now, using the online <a href="http://daringfireball.net/projects/markdown/dingus" title="Dingus">Dingus</a>.
-scriptogr.am has also implemented support for features currently not available with the plain Markdown syntax. Read more in the <a href="http://michelf.ca/projects/php-markdown/extra/" title="documentation">documentation</a>.
-Note that these features are experimental, so we can&rsquo;t guarantee that they will always remain.</p>
-
-<h1>Getting started</h1>
-
-<p>After connecting your Dropbox account to scriptogr.am, some necessary files and folders are added to your Dropbox at <code>Apps/scriptogram</code>. First the <em>GET_STARTED.txt</em> text file that pretty much explains the exact same as what you’re reading now. Next, we’ve added a <code>posts</code> folder. This is where you add your blog <em>post</em> (&amp; <em>page</em>) files. These files are plain textfiles, but needs to be saved with the .md (markdown) extension like this: <em>yourfile.md</em></p>
-
-<p><img src="http://dl.dropbox.com/u/35476/_scriptogram/folder.png" alt="" /></p>
-
-<p>Please use standard, non foreign filenames. Dropbox sometimes have problem syncing filenames that contains invalid HTML characters.
-We’ve added a post example page (this file) there for you to get familiar with.</p>
-
-<h2>The template data</h2>
-
-<p>All files needs to contain &ldquo;front block&rdquo;. The front block must be the first thing in the file and takes the form of:</p>
-
-<pre><code>Date: 2012-04-17
-Title: My first post
-</code></pre>
-
-<p>You can set any of the predefined variables (see below for a reference). But, the <em>Title</em> is required. Without the title, the system will fail.</p>
-
-<h3>Predefined global variables</h3>
-
-<p><em>All the variable names below are case-sensitive:</em></p>
-
-<p><code>Required:</code></p>
-
-<pre><code>Title
-</code></pre>
-
-<p>The title of your post (or page)</p>
-
-<p><code>Not required, but close to:</code></p>
-
-<pre><code>Date
-</code></pre>
-
-<p>The following date format is the correct one to use: <em>2011-12-31 12:31</em> or <em>2011-12-31</em>.
-(The <em>Date</em> variable can be used to ensure correct sorting of posts.)</p>
-
-<p><code>Optional:</code></p>
-
-<pre><code>Published
-</code></pre>
-
-<p>Set to ’false’ if you don’t want a post to show up when the site is generated.</p>
-
-<pre><code>Type
-</code></pre>
-
-<p>Set to ’page’ if you wan’t the post to act as a ’page’ instead of a ’post’.</p>
-
-<pre><code>Slug
-</code></pre>
-
-<p>Custom permalink (replaces the auto generated url based on the &ldquo;Title:&rdquo; variable), especially useful if titles tend to be long or they change frequently. E.g ’my-custom-permalink-url’</p>
-
-<pre><code>Link
-</code></pre>
-
-<p>Links the &ldquo;post&rdquo; or &ldquo;page&rdquo; title to an external source. E.g ’<a href="http://google.com%E2%80%99">http://google.com%E2%80%99</a></p>
-
-<pre><code>Tags
-</code></pre>
-
-<p>Add tags to your posts and pages. Comma separated words. Once added, scriptogr.am will transform all tags to valid basic HTML characters.</p>
-
-<pre><code>Excerpt
-</code></pre>
-
-<p>Add an excerpt<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> to your post or page.</p>
-
-<h2>Difference between ’posts’ and ’pages’</h2>
-
-<p>A <code>post</code> is a blog post.</p>
-
-<p>A <code>page</code> is a similar as a <em>post</em>, but generates a link visible in the <em>menu</em> on your site that will lean to a page permalink.</p>
-
-<h2>Publishing your posts</h2>
-
-<p>This is simple. Just head to your admin panel and hit the ”Synchronize” button, or enable autosync in your settings. When logged in to scriptogr.am and visiting your own page, you’ll see the scriptogr.am logotype symbol on the top right of the browser window. This is the link that leads to your admin panel.</p>
-
-<h2>Published vs Draft</h2>
-
-<p>There are two ways to mark posts and pages as drafts or published. The first way is to use the draft folder. Everything you put here will be treated as draft, and everything you put direct under the posts folder will be treated as published. The ”Publish” and ”Draft” buttons in the dashboard handles these file locations for you. You can also use the Published variable, mentioned above. The Published variable will ALWAYS take precedence over the file location.</p>
-
-<p><strong>Finally,</strong> happy posting. If you have any questions, suggestions or thoughts just drop us an <a href="mailto:info@scriptogr.am">e-mail</a> at any time.</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>An <a href="http://en.wikipedia.org/wiki/Excerpt" title="Excerpt on Wikipedia">excerpt</a> is a relatively small sample passage from a longer work, such as a book or article.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
 </div>
 
-]]></content>
-  </entry>
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
-</feed>
+
+
+<time datetime="2014-03-15T13:00:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Rob Playford
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-272698-8']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
