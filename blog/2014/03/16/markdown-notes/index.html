@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>shadowcryptic#blog</title>
+  <title>Markdown Notes - shadowcryptic#blog</title>
   <meta name="author" content="Rob Playford">
 
   
@@ -20,7 +20,7 @@ code snippet
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.shadowcryptic.com">
+  <link rel="canonical" href="http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
@@ -78,15 +78,12 @@ code snippet
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/16/markdown-notes/">Markdown Notes</a></h1>
+      <h1 class="entry-title">Markdown Notes</h1>
     
     
       <p class="meta">
@@ -109,7 +106,7 @@ code snippet
   </header>
 
 
-  <div class="entry-content"><p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></p>
+<div class="entry-content"><p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></p>
 
 <h3>Syntax</h3>
 
@@ -197,73 +194,16 @@ end</code></pre>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/14/new-ocotopress-themes/">New Ocotopress Themes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Rob Playford</span></span>
 
-<time datetime="2014-03-14T11:00:00+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From the root directory:</p>
-
-<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
-
-<pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
-</code></pre>
-
-<p>Then install with the command:</p>
-
-<pre><code>$ rake install['slash']
-</code></pre>
-
-<p>To revert to the original &lsquo;classic&rsquo; theme:</p>
-
-<pre><code>$ rake install['classic']
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/14/octopress-notes/">Octopress Notes</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -275,103 +215,32 @@ end</code></pre>
   
 
 
-<time datetime="2014-03-14T10:00:00+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-03-16T11:27:22+00:00" pubdate data-updated="true">Mar 16<span>th</span>, 2014</time>
+      
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes/" data-via="timecode" data-counturl="http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes/" >Tweet</a>
+  
+  
+  
+</div>
 
-
-  <div class="entry-content"><h2>Basic usage</h2>
-
-<p>When working on the site locally, run</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake watch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
-
-<p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>)</p>
-
-<p>Add new posts with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or a page with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake new_page<span class="o">[</span>page-title<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To generate the blog before sending off to the hosting site:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake generate
-</span><span class='line'><span class="nv">$ </span>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>This copies the generated files into _deploy/, adds them to git, then commits and pushes them up to the master branch where they will be published on GitHub Pages</em></p>
-
-<p><strong>NOTE</strong>: Don&rsquo;t forget to commit the source! <em>That&rsquo;s all the code in the source repo.</em></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git add -all
-</span><span class='line'><span class="nv">$ </span>git commit -m <span class="s1">&#39;your message&#39;</span>
-</span><span class='line'><span class="nv">$ </span>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>NOTE</strong>: In order to split the hosting and repo after the initial install (following the octopress docs) I had to remove the origin with <code>$ git remote rm origin</code> before adding the current bitbucket one.</p>
-
-<h2>What is Octopress?</h2>
-
-<p>Octopress is <a href="https://github.com/mojombo/jekyll">Jekyll</a> blogging at its finest.</p>
-
-<ol>
-<li><strong>Octopress sports a clean responsive theme</strong> written in semantic HTML5, focused on readability and friendliness toward mobile devices.</li>
-<li><strong>Code blogging is easy and beautiful.</strong> Embed code (with <a href="http://ethanschoonover.com/solarized">Solarized</a> styling) in your posts from gists, jsFiddle or from your filesystem.</li>
-<li><strong>Third party integration is simple</strong> with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.</li>
-<li><strong>It&rsquo;s easy to use.</strong> A collection of rake tasks simplifies development and makes deploying a cinch.</li>
-<li><strong>Ships with great plug-ins</strong> some original and others from the Jekyll community &mdash; tested and improved.</li>
-</ol>
-
-
-<h2>Documentation</h2>
-
-<p>Check out <a href="http://octopress.org/docs">Octopress.org</a> for guides and documentation.</p>
-
-<p>Especially:</p>
-
-<ul>
-<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
-<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
-<li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
-<li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
-</ul>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/14/new-ocotopress-themes/" title="Previous Post: new ocotopress themes">&laquo; new ocotopress themes</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -396,7 +265,7 @@ end</code></pre>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/timecode">@timecode</a> on GitHub
@@ -437,6 +306,7 @@ end</code></pre>
 
   
 </aside>
+
 
     </div>
   </div>

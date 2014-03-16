@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>shadowcryptic#blog</title>
+  <title>Octopress Notes - shadowcryptic#blog</title>
   <meta name="author" content="Rob Playford">
 
   
-  <meta name="description" content="See Sharing Code Snippets Syntax ``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
-code snippet
-``` a ruby example ``` &hellip;">
+  <meta name="description" content="Basic usage When working on the site locally, run 1
+$ rake watch This watches source/ and sass/ for changes and regenerates when necessary Tip: Use &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ code snippet
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.shadowcryptic.com">
+  <link rel="canonical" href="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
@@ -78,188 +77,12 @@ code snippet
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/16/markdown-notes/">Markdown Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-16T11:27:22+00:00" pubdate data-updated="true">Mar 16<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></p>
-
-<h3>Syntax</h3>
-
-<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
-code snippet
-```
-</code></pre>
-
-<p>a ruby example</p>
-
-<pre><code>``` ruby a ruby example
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-</code></pre>
-
-<figure class='code'><figcaption><span>a ruby example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
-</span><span class='line'><span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>a ruby example with extras</p>
-
-<pre><code>``` ruby a ruby example linenos:false
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-</code></pre>
-
-<figure class='code'><figcaption><span>a ruby example Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article linenos:false start:51 mark:52,53-54</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<div>
-  <pre><code class='ruby'>def foo
-  puts &#39;foo&#39;
-end</code></pre>
-</div>
-
-
-
-
-<figure class='code'><figcaption><span>Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article &#8230;</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Coffeescript Tricks start:51 mark:52,54-55</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="c1"># Given an alphabet:</span>
-</span><span class='line'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Iterate over part of the alphabet:</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/14/new-ocotopress-themes/">New Ocotopress Themes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-14T11:00:00+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From the root directory:</p>
-
-<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
-
-<pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
-</code></pre>
-
-<p>Then install with the command:</p>
-
-<pre><code>$ rake install['slash']
-</code></pre>
-
-<p>To revert to the original &lsquo;classic&rsquo; theme:</p>
-
-<pre><code>$ rake install['classic']
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/14/octopress-notes/">Octopress Notes</a></h1>
+      <h1 class="entry-title">Octopress Notes</h1>
     
     
       <p class="meta">
@@ -282,7 +105,7 @@ end</code></pre>
   </header>
 
 
-  <div class="entry-content"><h2>Basic usage</h2>
+<div class="entry-content"><h2>Basic usage</h2>
 
 <p>When working on the site locally, run</p>
 
@@ -360,18 +183,53 @@ end</code></pre>
 </ul>
 
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Rob Playford</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2014-03-14T10:00:00+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/" data-via="timecode" data-counturl="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/03/14/new-ocotopress-themes/" title="Next Post: new ocotopress themes">new ocotopress themes &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -396,7 +254,7 @@ end</code></pre>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/timecode">@timecode</a> on GitHub
@@ -437,6 +295,7 @@ end</code></pre>
 
   
 </aside>
+
 
     </div>
   </div>
