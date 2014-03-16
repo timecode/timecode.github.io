@@ -18,8 +18,34 @@ article,
 #main,
 #content
 {
-  background-color:#FFF;
-  border-width:0px;
+  background-color: #FFF;
+  border-width: 0px;
   margin: 0px;
   padding: 0px;
+}
+
+/* theme - slash */
+
+.post h2.title, .post .entry-content {
+  margin-left: 0px;
+  line-height: 1.5;
+}
+
+article h2.title {
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+div.meta > div.date
+{
+  top:-18px;
+}
+
+div.tags
+{
+  display: none;
+}
+
+.line-number {
+  font-size: 10px;
 }

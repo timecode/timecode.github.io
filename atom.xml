@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-16T19:40:11+00:00</updated>
+  <updated>2014-03-16T21:59:24+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Markdown Notes]]></title>
+    <title type="html"><![CDATA[markdown notes]]></title>
     <link href="http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes/"/>
     <updated>2014-03-16T11:27:22+00:00</updated>
     <id>http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes</id>
@@ -86,7 +86,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[New Ocotopress Themes]]></title>
+    <title type="html"><![CDATA[new ocotopress themes]]></title>
     <link href="http://blog.shadowcryptic.com/blog/2014/03/14/new-ocotopress-themes/"/>
     <updated>2014-03-14T11:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/blog/2014/03/14/new-ocotopress-themes</id>
@@ -110,7 +110,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Octopress Notes]]></title>
+    <title type="html"><![CDATA[octopress notes]]></title>
     <link href="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/"/>
     <updated>2014-03-14T10:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes</id>
