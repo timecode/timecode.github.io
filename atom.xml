@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-16T13:58:16+00:00</updated>
+  <updated>2014-03-16T19:40:11+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -27,7 +27,17 @@ code snippet
 ```
 </code></pre>
 
-<p>a ruby example</p>
+<p>Or</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %&#125;
+</span><span class='line'>code snippet
+</span><span class='line'>&#123;% endcodeblock %&#125;</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>A ruby example</h3>
 
 <pre><code>``` ruby a ruby example
 require 'redcarpet'
@@ -35,6 +45,8 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 </code></pre>
+
+<p>produces</p>
 
 <figure class='code'><figcaption><span>a ruby example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -45,14 +57,18 @@ puts markdown.to_html
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>a ruby example with extras</p>
+<h3>Another ruby example with extras (NOT WORKING ???)</h3>
 
-<pre><code>``` ruby a ruby example linenos:false
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+<pre><code>``` ruby a ruby example Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article linenos:false start:51 mark:52,53-54
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
 ```
 </code></pre>
+
+<p>produces</p>
 
 <figure class='code'><figcaption><span>a ruby example Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article linenos:false start:51 mark:52,53-54</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -64,45 +80,6 @@ puts markdown.to_html
 </span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<div>
-  <pre><code class='ruby'>def foo
-  puts &#39;foo&#39;
-end</code></pre>
-</div>
-
-
-
-
-<figure class='code'><figcaption><span>Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article &#8230;</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Coffeescript Tricks start:51 mark:52,54-55</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="c1"># Given an alphabet:</span>
-</span><span class='line'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Iterate over part of the alphabet:</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
@@ -137,7 +114,46 @@ end</code></pre>
     <link href="http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/"/>
     <updated>2014-03-14T10:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes</id>
-    <content type="html"><![CDATA[<h2>Basic usage</h2>
+    <content type="html"><![CDATA[<h2>Install</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nv">$ </span>mate octopress/Gemfile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add rvm ruby version and gemset to top of Gemfile, for example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+</span><span class='line'>  <span class="n">ruby</span> <span class="s1">&#39;2.1.1&#39;</span>
+</span><span class='line'>  <span class="c1">#ruby-gemset=octopress</span>
+</span><span class='line'>  <span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Move into the directory and pull it up in an editor</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
+</span><span class='line'><span class="nv">$ </span>mate ./
+</span><span class='line'><span class="nv">$ </span>bundle install
+</span><span class='line'><span class="nv">$ </span>rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Basic usage</h2>
 
 <p>When working on the site locally, run</p>
 
@@ -149,6 +165,22 @@ end</code></pre>
 <p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
 
 <p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># see gotcha (below)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em><strong>Gotcha</strong>: Despite the <code>Gemfile</code> being used (above) to switch to the correct rvm and gemset, I &lsquo;sometimes&rsquo; have to add the old <code>.rvmrc</code> file before Pow will serve the site, for example:</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat .rvmrc <span class="s">&lt;&lt; rvm use 2.1.1@octopress</span>
+</span><span class='line'><span class="s">$ rvm</span> rvmrc trust
+</span><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># pow now works every time :-/</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Add new posts with</p>
 
@@ -212,6 +244,8 @@ end</code></pre>
 <li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
 <li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
 <li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
+<li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
+<li><a href="http://www.w3schools.com/charsets/ref_utf_basic_latin.asp">HTML Unicode UTF-8</a></li>
 </ul>
 
 ]]></content>

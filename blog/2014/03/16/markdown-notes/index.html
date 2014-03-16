@@ -11,7 +11,10 @@
   
   <meta name="description" content="See Sharing Code Snippets Syntax ``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
 code snippet
-``` a ruby example ``` &hellip;">
+``` Or 1
+2
+3
+&#123;% &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,7 +118,17 @@ code snippet
 ```
 </code></pre>
 
-<p>a ruby example</p>
+<p>Or</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %&#125;
+</span><span class='line'>code snippet
+</span><span class='line'>&#123;% endcodeblock %&#125;</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>A ruby example</h3>
 
 <pre><code>``` ruby a ruby example
 require 'redcarpet'
@@ -123,6 +136,8 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 </code></pre>
+
+<p>produces</p>
 
 <figure class='code'><figcaption><span>a ruby example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -133,14 +148,18 @@ puts markdown.to_html
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>a ruby example with extras</p>
+<h3>Another ruby example with extras (NOT WORKING ???)</h3>
 
-<pre><code>``` ruby a ruby example linenos:false
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+<pre><code>``` ruby a ruby example Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article linenos:false start:51 mark:52,53-54
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
 ```
 </code></pre>
+
+<p>produces</p>
 
 <figure class='code'><figcaption><span>a ruby example Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article linenos:false start:51 mark:52,53-54</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -152,45 +171,6 @@ puts markdown.to_html
 </span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<div>
-  <pre><code class='ruby'>def foo
-  puts &#39;foo&#39;
-end</code></pre>
-</div>
-
-
-
-
-<figure class='code'><figcaption><span>Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article &#8230;</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
-</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>Coffeescript Tricks start:51 mark:52,54-55</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="c1"># Given an alphabet:</span>
-</span><span class='line'><span class="nv">alphabet = </span><span class="s">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># Iterate over part of the alphabet:</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">letter</span> <span class="k">for</span> <span class="nx">letter</span> <span class="k">in</span> <span class="nx">alphabet</span><span class="p">[</span><span class="mi">4</span><span class="p">..</span><span class="mi">8</span><span class="p">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>

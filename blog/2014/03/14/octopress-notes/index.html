@@ -9,8 +9,10 @@
   <meta name="author" content="Rob Playford">
 
   
-  <meta name="description" content="Basic usage When working on the site locally, run 1
-$ rake watch This watches source/ and sass/ for changes and regenerates when necessary Tip: Use &hellip;">
+  <meta name="description" content="Install 1
+2
+$ git clone git://github.com/imathis/octopress.git octopress
+$ mate octopress/Gemfile Add rvm ruby version and gemset to top of Gemfile, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -105,7 +107,46 @@ $ rake watch This watches source/ and sass/ for changes and regenerates when nec
   </header>
 
 
-<div class="entry-content"><h2>Basic usage</h2>
+<div class="entry-content"><h2>Install</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'><span class="nv">$ </span>mate octopress/Gemfile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add rvm ruby version and gemset to top of Gemfile, for example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+</span><span class='line'>  <span class="n">ruby</span> <span class="s1">&#39;2.1.1&#39;</span>
+</span><span class='line'>  <span class="c1">#ruby-gemset=octopress</span>
+</span><span class='line'>  <span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span>
+</span><span class='line'>  <span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Move into the directory and pull it up in an editor</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
+</span><span class='line'><span class="nv">$ </span>mate ./
+</span><span class='line'><span class="nv">$ </span>bundle install
+</span><span class='line'><span class="nv">$ </span>rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Basic usage</h2>
 
 <p>When working on the site locally, run</p>
 
@@ -117,6 +158,22 @@ $ rake watch This watches source/ and sass/ for changes and regenerates when nec
 <p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
 
 <p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># see gotcha (below)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em><strong>Gotcha</strong>: Despite the <code>Gemfile</code> being used (above) to switch to the correct rvm and gemset, I &lsquo;sometimes&rsquo; have to add the old <code>.rvmrc</code> file before Pow will serve the site, for example:</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat .rvmrc <span class="s">&lt;&lt; rvm use 2.1.1@octopress</span>
+</span><span class='line'><span class="s">$ rvm</span> rvmrc trust
+</span><span class='line'><span class="nv">$ </span>rake pow        <span class="c"># pow now works every time :-/</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Add new posts with</p>
 
@@ -180,6 +237,8 @@ $ rake watch This watches source/ and sass/ for changes and regenerates when nec
 <li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
 <li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
 <li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
+<li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
+<li><a href="http://www.w3schools.com/charsets/ref_utf_basic_latin.asp">HTML Unicode UTF-8</a></li>
 </ul>
 
 </div>
