@@ -1,0 +1,255 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>markdown notes - shadowcryptic#blog</title>
+	<meta name="author" content="Rob Playford">
+
+	
+	<meta name="description" content="<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) --> <!-- Start &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="shadowcryptic#blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">shadowcryptic#blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+	<li><a href="/archive/">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+	<li><a href="/archive/">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/+RobPlayford1?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/timecode" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/timecode" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Markdown Notes</h2>
+	<div class="entry-content"><!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a>
+And</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
+<li><a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>
+<!-- more --></li>
+</ul>
+
+
+<h3>Syntax</h3>
+
+<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
+code snippet
+```
+</code></pre>
+
+<p>Or</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&#123;% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %&#125;
+</span><span class='line'>code snippet
+</span><span class='line'>&#123;% endcodeblock %&#125;</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>A ruby example</h3>
+
+<pre><code>``` ruby a ruby example
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+</code></pre>
+
+<p>produces</p>
+
+<figure class='code'><figcaption><span>a ruby example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
+</span><span class='line'><span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Another ruby example with extras (NOT WORKING ???)</h3>
+
+<pre><code>``` ruby a ruby example Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article linenos:false start:51 mark:52,53-54
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
+```
+</code></pre>
+
+<p>produces</p>
+
+<figure class='code'><figcaption><span>a ruby example Discover if a number is prime</span><a href='http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/'>Source Article linenos:false start:51 mark:52,53-54</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
+</span><span class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-16T11:27:22+00:00" pubdate data-updated="true">Mar 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/categories/markdown/'>markdown</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Rob Playford
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-272698-8']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

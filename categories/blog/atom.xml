@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/blog/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-17T20:50:50+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[new ocotopress themes]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/"/>
+    <updated>2014-03-14T11:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>From the root directory:</p>
+
+<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
+
+<pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
+</code></pre>
+
+<p>Then install with the command:</p>
+
+<pre><code>$ rake install['slash']
+</code></pre>
+
+<p>To revert to the original &lsquo;classic&rsquo; theme:</p>
+
+<pre><code>$ rake install['classic']
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[octopress notes]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/14/octopress-notes/"/>
+    <updated>2014-03-14T10:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/14/octopress-notes</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<h3>Install</h3>
+
+<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
+$ mate octopress/Gemfile
+</code></pre>
+
+<p>Add rvm ruby version and gemset to top of Gemfile, for example:
+<code>ruby
+  source "https://rubygems.org"
+  ruby '2.1.1'
+  #ruby-gemset=octopress
+  .
+  .
+  .
+</code></p>
+
+<p>Move into the directory and pull it up in an editor</p>
+
+<pre><code>$ cd octopress
+$ mate ./
+$ bundle install
+$ rake install
+</code></pre>
+
+<h3>Basic usage</h3>
+
+<p>When working on the site locally, run</p>
+
+<pre><code>$ rake watch
+</code></pre>
+
+<p><em>This watches source/ and sass/ for changes and regenerates when necessary</em></p>
+
+<p><strong>Tip</strong>: Use <a href="http://pow.cx">POW</a> to serve the site locally (i.e. at <a href="http://octopress.dev">http://octopress.dev</a>) <br/>
+<strong>Power Tip</strong>: I have an alias in my <code>~/.bash_rc</code> file to automate the pow setup:</p>
+
+<pre><code>alias pow='ln -is `pwd` ~/.pow/${PWD##*/} &amp;&amp; open http://${PWD##*/}.dev'
+</code></pre>
+
+<p>With that alias I simply enter the command:</p>
+
+<pre><code>$ pow             # see gotcha (below)
+</code></pre>
+
+<p><em><strong>Gotcha</strong>: Despite the <code>Gemfile</code> being used (above) to switch to the correct rvm and gemset, I &lsquo;sometimes&rsquo; have to add the old <code>.rvmrc</code> file before Pow will serve the site, for example:</em></p>
+
+<pre><code>$ cat .rvmrc &lt;&lt; rvm use 2.1.1@octopress
+$ rvm rvmrc trust
+$ pow             # pow now serves without falling over :-/
+</code></pre>
+
+<p>Add new posts with</p>
+
+<pre><code>$ rake new_post["title"]
+</code></pre>
+
+<p>or a page with</p>
+
+<pre><code>$ rake new_page[page-title]
+</code></pre>
+
+<p>To generate the blog before sending off to the hosting site:</p>
+
+<pre><code>$ rake generate
+$ rake deploy
+</code></pre>
+
+<p><em>This copies the generated files into _deploy/, adds them to git, then commits and pushes them up to the master branch where they will be published on GitHub Pages</em></p>
+
+<p><strong>NOTE</strong>: Don&rsquo;t forget to commit the source! <em>That&rsquo;s all the code in the source repo.</em></p>
+
+<pre><code>$ git add -all
+$ git commit -m 'your message'
+$ git push origin source
+</code></pre>
+
+<p><strong>NOTE</strong>: In order to split the hosting and repo after the initial install (following the octopress docs) I had to remove the origin with <code>$ git remote rm origin</code> before adding the current bitbucket one.</p>
+
+<h3>What is Octopress?</h3>
+
+<p>Octopress is <a href="https://github.com/mojombo/jekyll">Jekyll</a> blogging at its finest.</p>
+
+<ol>
+<li><strong>Octopress sports a clean responsive theme</strong> written in semantic HTML5, focused on readability and friendliness toward mobile devices.</li>
+<li><strong>Code blogging is easy and beautiful.</strong> Embed code (with <a href="http://ethanschoonover.com/solarized">Solarized</a> styling) in your posts from gists, jsFiddle or from your filesystem.</li>
+<li><strong>Third party integration is simple</strong> with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.</li>
+<li><strong>It&rsquo;s easy to use.</strong> A collection of rake tasks simplifies development and makes deploying a cinch.</li>
+<li><strong>Ships with great plug-ins</strong> some original and others from the Jekyll community &mdash; tested and improved.</li>
+</ol>
+
+
+<h3>Documentation</h3>
+
+<p>Check out <a href="http://octopress.org/docs">Octopress.org</a> for guides and documentation.</p>
+
+<p>Especially:</p>
+
+<ul>
+<li><a href="http://octopress.org/docs/updating/">Updating Octopress</a></li>
+<li><a href="http://zespia.tw/Octopress-Theme-Slash/#overview">Octopress-Theme-Slash</a></li>
+<li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
+<li><a href="http://www.w3schools.com/charsets/ref_utf_basic_latin.asp">HTML Unicode UTF-8</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

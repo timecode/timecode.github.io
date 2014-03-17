@@ -1,0 +1,173 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>my rails dev setup - shadowcryptic#blog</title>
+	<meta name="author" content="Rob Playford">
+
+	
+	<meta name="description" content="<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) --> Here&rsquo;s &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="shadowcryptic#blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">shadowcryptic#blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+	<li><a href="/archive/">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+	<li><a href="/archive/">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/+RobPlayford1?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/timecode" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/timecode" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="page">
+    
+    <h1 class="title">My Rails Dev Setup</h1>
+    
+    <div class="entry-content"><!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<p>Here&rsquo;s a list of everything I do to develop a rails app!</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Prerequisites:</p>
+
+<ol>
+<li><p> I&rsquo;ve already created a rails app. See <a href="/2014/03/16/creating-a-new-heroku-rails-4-app/">creating-a-new-heroku-rails-4-app</a> post.</p></li>
+<li><p> I&rsquo;ve setup a BDD stack for the rails app. See <a href="/2014/03/17/setting-up-my-rails-bdd-stack/">setting-up-my-rails-bdd-stack</a> post.</p></li>
+</ol>
+
+
+<p>Then:</p>
+
+<ol>
+<li><p> Open a terminal window and:</p>
+
+<pre><code>$ cd rails-app-name
+</code></pre></li>
+<li><p> Open a duplicate terminal window with <code>cmd-T</code>, tear its tab off so it becomes its own window, move the window to a second monitor or somewhere where it&rsquo;s visible at all times, then start a guard session:</p>
+
+<pre><code>$ bundle exec guard
+</code></pre></li>
+<li><p> Open the project in an editor:</p>
+
+<pre><code>$ mate ./
+          # OR
+$ subl ./
+</code></pre></li>
+<li><p> Add features specifications (watch guard window show red failures).</p></li>
+<li><p> Implement features (watch guard window show green passes).</p></li>
+<li><p> Repeat steps 4 and 5</p></li>
+</ol>
+
+</div>
+</article>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Rob Playford
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-272698-8']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

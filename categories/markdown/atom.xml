@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: markdown | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-17T20:50:50+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[markdown notes]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/16/markdown-notes/"/>
+    <updated>2014-03-16T11:27:22+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/16/markdown-notes</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>See <a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a>
+And</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown syntax</a></li>
+<li><a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>
+<!-- more --></li>
+</ul>
+
+
+<h3>Syntax</h3>
+
+<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
+code snippet
+```
+</code></pre>
+
+<p>Or
+<code>
+&amp;#123;% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %&amp;#125;
+code snippet
+&amp;#123;% endcodeblock %&amp;#125;
+</code></p>
+
+<h3>A ruby example</h3>
+
+<pre><code>``` ruby a ruby example
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+</code></pre>
+
+<p>produces
+<code>ruby a ruby example
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+</code></p>
+
+<h3>Another ruby example with extras (NOT WORKING ???)</h3>
+
+<pre><code>``` ruby a ruby example Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article linenos:false start:51 mark:52,53-54
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
+```
+</code></pre>
+
+<p>produces
+``` ruby a ruby example Discover if a number is prime <a href="http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/">http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/</a> Source Article linenos:false start:51 mark:52,53-54
+class Fixnum
+  def prime?</p>
+
+<pre><code>('1' * self) !~ /^1?$|^(11+?)\1+$/
+</code></pre>
+
+<p>  end
+end
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[markdown cheatsheet]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet/"/>
+    <updated>2014-03-15T13:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>See <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
+
+<p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber&rsquo;s original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
+
+<p>You can play around with Markdown on a <a href="http://www.markdown-here.com/livedemo.html">live demo page</a>.</p>
+
+<h5>Table of Contents</h5>
+
+<p><a href="#headers">Headers</a><br/>
+<a href="#emphasis">Emphasis</a><br/>
+<a href="#lists">Lists</a><br/>
+<a href="#links">Links</a><br/>
+<a href="#images">Images</a><br/>
+<a href="#code">Code and Syntax Highlighting</a><br/>
+<a href="#tables">Tables</a><br/>
+<a href="#blockquotes">Blockquotes</a><br/>
+<a href="#html">Inline HTML</a><br/>
+<a href="#hr">Horizontal Rule</a><br/>
+<a href="#lines">Line Breaks</a><br/>
+<a href="#videos">Videos</a></p>
+
+<p><a name="headers"></a></p>
+
+<h2>Headers</h2>
+
+<p>```</p>
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<h4>H4</h4>
+
+<h5>H5</h5>
+
+<h6>H6</h6>
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+<h1>Alt-H1</h1>
+
+<h2>Alt-H2</h2>
+
+<p>```</p>
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<h4>H4</h4>
+
+<h5>H5</h5>
+
+<h6>H6</h6>
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+<h1>Alt-H1</h1>
+
+<h2>Alt-H2</h2>
+
+<p><a name="emphasis"></a></p>
+
+<h2>Emphasis</h2>
+
+<p>```
+Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del>
+```</p>
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+
+<p><a name="lists"></a></p>
+
+<h2>Lists</h2>
+
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+
+<p>```
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don&rsquo;t matter, just that it&rsquo;s a number
+⋅⋅1. Ordered sub-list
+4. And another item.</p>
+
+<p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p>
+
+<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+
+<ul>
+<li>Unordered list can use asterisks</li>
+<li>Or minuses</li>
+<li><p>Or pluses
+```</p></li>
+<li><p>First ordered list item</p></li>
+<li>Another item</li>
+<li>Unordered sub-list.</li>
+<li>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number</li>
+<li> Ordered sub-list</li>
+<li><p>And another item.</p>
+
+<p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p>
+
+<p>To have a line break without a paragraph, you will need to use two trailing spaces.<br/>
+Note that this line is separate, but within the same paragraph.<br/>
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p></li>
+<li><p>Unordered list can use asterisks</p></li>
+<li>Or minuses</li>
+<li>Or pluses</li>
+</ul>
+
+
+<p><a name="links"></a></p>
+
+<h2>Links</h2>
+
+<p>There are two ways to create links.</p>
+
+<p>```
+<a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p>```</p>
+
+<p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+
+<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p><a name="images"></a></p>
+
+<h2>Images</h2>
+
+<p>```
+Here&rsquo;s our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt text" /></p>
+
+<p>```</p>
+
+<p>Here&rsquo;s our logo (hover to see the title text):</p>
+
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
+
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt text" /></p>
+
+<p><a name="code"></a></p>
+
+<h2>Code and Syntax Highlighting</h2>
+
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn&rsquo;t. However, many renderers &mdash; like Github&rsquo;s and <em>Markdown Here</em> &mdash; support syntax highlighting. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<p><code>
+Inline `code` has `back-ticks around` it.
+</code></p>
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks &mdash; they&rsquo;re easier and only they support syntax highlighting.</p>
+
+<p><code>
+</code>javascript
+ var s = &ldquo;JavaScript syntax highlighting&rdquo;;
+ alert(s);
+ ```</p>
+
+<p> <code>python
+ s = "Python syntax highlighting"
+ print s
+</code></p>
+
+<p> <code>
+ No language indicated, so no syntax highlighting.
+ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code>
+```</p>
+
+<p><code>javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+</code></p>
+
+<p><code>python
+s = "Python syntax highlighting"
+print s
+</code></p>
+
+<p><code>
+No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></p>
+
+<p>(Github Wiki pages don&rsquo;t seem to support syntax highlighting, so the above won&rsquo;t be colourful (the strings are not red, for example). Try it out in a <em>Markdown Here</em> email or a Github Markdown README or Github Issue &mdash; you can preview a new Issue without submitting it.)</p>
+
+<p>Again, to see what languages are available for highlighting, and how to write those language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<p><a name="tables"></a></p>
+
+<h2>Tables</h2>
+
+<p>Tables aren&rsquo;t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email &mdash; a task that would otherwise require copy-pasting from another application.</p>
+
+<p>```
+Colons can be used to align columns.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> Tables        </th>
+<th align="center"> Are           </th>
+<th align="right"> Cool  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> col 3 is      </td>
+<td align="center"> right-aligned </td>
+<td align="right"> $1600 |</td>
+</tr>
+<tr>
+<td></td>
+<td> col 2 is      </td>
+<td align="center"> centered      </td>
+<td align="right">   $12 |</td>
+</tr>
+<tr>
+<td></td>
+<td> zebra stripes </td>
+<td align="center"> are neat      </td>
+<td align="right">    $1 |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The outer pipes (|) are optional, and you don&rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table>
+<thead>
+<tr>
+<th>Markdown </th>
+<th> Less </th>
+<th> Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em> </td>
+<td> <code>renders</code> </td>
+<td> <strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 2 </td>
+<td> 3</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>```</p>
+
+<p>Colons can be used to align columns.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> Tables        </th>
+<th align="center"> Are           </th>
+<th align="right"> Cool </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> col 3 is      </td>
+<td align="center"> right-aligned </td>
+<td align="right"> $1600 |</td>
+</tr>
+<tr>
+<td></td>
+<td> col 2 is      </td>
+<td align="center"> centered      </td>
+<td align="right">   $12 |</td>
+</tr>
+<tr>
+<td></td>
+<td> zebra stripes </td>
+<td align="center"> are neat      </td>
+<td align="right">    $1 |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The outer pipes (|) are optional, and you don&rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+
+<table>
+<thead>
+<tr>
+<th>Markdown </th>
+<th> Less </th>
+<th> Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em> </td>
+<td> <code>renders</code> </td>
+<td> <strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 2 </td>
+<td> 3</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><a name="blockquotes"></a></p>
+
+<h2>Blockquotes</h2>
+
+<p>```</p>
+
+<blockquote><p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+<p>Quote break.</p>
+
+<blockquote><p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.
+```</p>
+
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+<p>Quote break.</p>
+
+<blockquote><p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p></blockquote>
+
+<p><a name="html"></a></p>
+
+<h2>Inline HTML</h2>
+
+<p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p>
+
+<p>```</p>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+
+<p>```</p>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+
+<p><a name="hr"></a></p>
+
+<h2>Horizontal Rule</h2>
+
+<p>```
+Three or more&hellip;</p>
+
+<hr />
+
+<p>Hyphens</p>
+
+<hr />
+
+<p>Asterisks</p>
+
+<hr />
+
+<p>Underscores
+```</p>
+
+<p>Three or more&hellip;</p>
+
+<hr />
+
+<p>Hyphens</p>
+
+<hr />
+
+<p>Asterisks</p>
+
+<hr />
+
+<p>Underscores</p>
+
+<p><a name="lines"></a></p>
+
+<h2>Line Breaks</h2>
+
+<p>My basic recommendation for learning how line breaks work is to experiment and discover &mdash; hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You&rsquo;ll soon learn to get what you want. &ldquo;Markdown Toggle&rdquo; is your friend.</p>
+
+<p>Here are some things to try out:</p>
+
+<p>```
+Here&rsquo;s a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also a separate paragraph, but&hellip;
+This line is only separated by a single newline, so it&rsquo;s a separate line in the <em>same paragraph</em>.
+```</p>
+
+<p>Here&rsquo;s a line for us to start with.</p>
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+<p>This line is also begins a separate paragraph, but&hellip;<br/>
+This line is only separated by a single newline, so it&rsquo;s a separate line in the <em>same paragraph</em>.</p>
+
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there&rsquo;s no need to use MD&rsquo;s two-space line breaks.)</p>
+
+<p><a name="videos"></a></p>
+
+<h2>Videos</h2>
+
+<p>Use HTML to embed&hellip;</p>
+
+<p>```</p>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>```</p>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/hFHmYFlbFn8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Or, in pure Markdown, where they can&rsquo;t be added directly, you can add an image with a link to the video like this:</p>
+
+<p><code>
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+</code></p>
+
+<p><a href="http://www.youtube.com/watch?v=hFHmYFlbFn8"><img src="http://img.youtube.com/vi/hFHmYFlbFn8/0.jpg" alt="Transforming Formula One: 2014 Rules Explained (Full Version)" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[new ocotopress themes]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/"/>
+    <updated>2014-03-14T11:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>From the root directory:</p>
+
+<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
+
+<pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
+</code></pre>
+
+<p>Then install with the command:</p>
+
+<pre><code>$ rake install['slash']
+</code></pre>
+
+<p>To revert to the original &lsquo;classic&rsquo; theme:</p>
+
+<pre><code>$ rake install['classic']
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[scriptogram]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/13/scriptogram/"/>
+    <updated>2014-03-13T11:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/13/scriptogram</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Date: 2014-03-13 11:00
+Title: This is your blog, delivered by scriptogr.am</p>
+
+<p>Thank you for using scriptogr.am. We hope you’ll enjoy the app. It’s designed to be fast, simple and to get the most creativity out of you.</p>
+
+<p>scriptogr.am uses <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>, a lightweight markup language, originally created by <a href="http://daringfireball.net/" title="Daring Fireball">John Gruber</a> and <a href="http://www.aaronsw.com/" title="Aaron Swartz">Aaron Swartz</a>. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). See the <a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax">Syntax</a> page for details pertaining to Markdown’s formatting syntax. You can try it out, right now, using the online <a href="http://daringfireball.net/projects/markdown/dingus" title="Dingus">Dingus</a>.
+scriptogr.am has also implemented support for features currently not available with the plain Markdown syntax. Read more in the <a href="http://michelf.ca/projects/php-markdown/extra/" title="documentation">documentation</a>.
+Note that these features are experimental, so we can&rsquo;t guarantee that they will always remain.</p>
+
+<h1>Getting started</h1>
+
+<p>After connecting your Dropbox account to scriptogr.am, some necessary files and folders are added to your Dropbox at <code>Apps/scriptogram</code>. First the <em>GET_STARTED.txt</em> text file that pretty much explains the exact same as what you’re reading now. Next, we’ve added a <code>posts</code> folder. This is where you add your blog <em>post</em> (&amp; <em>page</em>) files. These files are plain textfiles, but needs to be saved with the .md (markdown) extension like this: <em>yourfile.md</em></p>
+
+<p><img src="http://dl.dropbox.com/u/35476/_scriptogram/folder.png" alt="" /></p>
+
+<p>Please use standard, non foreign filenames. Dropbox sometimes have problem syncing filenames that contains invalid HTML characters.
+We’ve added a post example page (this file) there for you to get familiar with.</p>
+
+<h2>The template data</h2>
+
+<p>All files needs to contain &ldquo;front block&rdquo;. The front block must be the first thing in the file and takes the form of:</p>
+
+<pre><code>Date: 2012-04-17
+Title: My first post
+</code></pre>
+
+<p>You can set any of the predefined variables (see below for a reference). But, the <em>Title</em> is required. Without the title, the system will fail.</p>
+
+<h3>Predefined global variables</h3>
+
+<p><em>All the variable names below are case-sensitive:</em></p>
+
+<p><code>Required:</code></p>
+
+<pre><code>Title
+</code></pre>
+
+<p>The title of your post (or page)</p>
+
+<p><code>Not required, but close to:</code></p>
+
+<pre><code>Date
+</code></pre>
+
+<p>The following date format is the correct one to use: <em>2011-12-31 12:31</em> or <em>2011-12-31</em>.
+(The <em>Date</em> variable can be used to ensure correct sorting of posts.)</p>
+
+<p><code>Optional:</code></p>
+
+<pre><code>Published
+</code></pre>
+
+<p>Set to ’false’ if you don’t want a post to show up when the site is generated.</p>
+
+<pre><code>Type
+</code></pre>
+
+<p>Set to ’page’ if you wan’t the post to act as a ’page’ instead of a ’post’.</p>
+
+<pre><code>Slug
+</code></pre>
+
+<p>Custom permalink (replaces the auto generated url based on the &ldquo;Title:&rdquo; variable), especially useful if titles tend to be long or they change frequently. E.g ’my-custom-permalink-url’</p>
+
+<pre><code>Link
+</code></pre>
+
+<p>Links the &ldquo;post&rdquo; or &ldquo;page&rdquo; title to an external source. E.g ’<a href="http://google.com%E2%80%99">http://google.com%E2%80%99</a></p>
+
+<pre><code>Tags
+</code></pre>
+
+<p>Add tags to your posts and pages. Comma separated words. Once added, scriptogr.am will transform all tags to valid basic HTML characters.</p>
+
+<pre><code>Excerpt
+</code></pre>
+
+<p>Add an excerpt<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> to your post or page.</p>
+
+<h2>Difference between ’posts’ and ’pages’</h2>
+
+<p>A <code>post</code> is a blog post.</p>
+
+<p>A <code>page</code> is a similar as a <em>post</em>, but generates a link visible in the <em>menu</em> on your site that will lean to a page permalink.</p>
+
+<h2>Publishing your posts</h2>
+
+<p>This is simple. Just head to your admin panel and hit the ”Synchronize” button, or enable autosync in your settings. When logged in to scriptogr.am and visiting your own page, you’ll see the scriptogr.am logotype symbol on the top right of the browser window. This is the link that leads to your admin panel.</p>
+
+<h2>Published vs Draft</h2>
+
+<p>There are two ways to mark posts and pages as drafts or published. The first way is to use the draft folder. Everything you put here will be treated as draft, and everything you put direct under the posts folder will be treated as published. The ”Publish” and ”Draft” buttons in the dashboard handles these file locations for you. You can also use the Published variable, mentioned above. The Published variable will ALWAYS take precedence over the file location.</p>
+
+<p><strong>Finally,</strong> happy posting. If you have any questions, suggestions or thoughts just drop us an <a href="mailto:info@scriptogr.am">e-mail</a> at any time.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>An <a href="http://en.wikipedia.org/wiki/Excerpt" title="Excerpt on Wikipedia">excerpt</a> is a relatively small sample passage from a longer work, such as a book or article.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,46 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/13/scriptogram/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/13/scriptogram/</loc>
+        <lastmod>2014-03-17T18:48:43+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/14/octopress-notes/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/14/octopress-notes/</loc>
+        <lastmod>2014-03-17T16:28:33+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/14/new-ocotopress-themes/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/</loc>
+        <lastmod>2014-03-17T16:28:42+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/15/markdown-cheatsheet/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet/</loc>
+        <lastmod>2014-03-17T16:28:29+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/16/markdown-notes/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/16/markdown-notes/</loc>
+        <lastmod>2014-03-17T16:28:20+00:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://blog.shadowcryptic.com/blog/2014/03/16/creating-a-new-heroku-rails-4-app/
-        </loc>
-        <lastmod>2014-03-17T14:48:26+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app/</loc>
+        <lastmod>2014-03-17T16:28:24+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/17/making-pages-look-nice/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/17/making-web-pages-look-nice/</loc>
+        <lastmod>2014-03-17T16:28:09+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/2014/03/17/rails-dev-bookmarks/</loc>
-        <lastmod>2014-03-17T09:22:53+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/</loc>
+        <lastmod>2014-03-17T17:10:10+00:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.shadowcryptic.com/blog/archives/</loc>
-        <lastmod>2014-03-17T14:48:26+00:00</lastmod>
+        <loc>http://blog.shadowcryptic.com/2014/03/17/setting-up-my-rails-bdd-stack/</loc>
+        <lastmod>2014-03-17T20:50:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.shadowcryptic.com/archive/</loc>
+        <lastmod>2014-03-17T20:50:49+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/</loc>
-        <lastmod>2014-03-17T14:48:26+00:00</lastmod>
+        <lastmod>2014-03-17T20:50:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.shadowcryptic.com/my-rails-dev-setup/</loc>
+        <lastmod>2014-03-17T20:32:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/robots.txt</loc>

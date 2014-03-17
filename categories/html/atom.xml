@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: html | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/html/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-17T20:50:50+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[making web-pages look nice]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/17/making-web-pages-look-nice/"/>
+    <updated>2014-03-17T08:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/17/making-web-pages-look-nice</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Check out the following:</p>
+
+<ul>
+<li><a href="http://24ways.org/2012/how-to-make-your-site-look-half-decent/">How to Make Your Site Look Half-Decent in Half an Hour</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

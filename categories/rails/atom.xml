@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/rails/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-17T20:50:50+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rails development bookmarks]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/"/>
+    <updated>2014-03-17T08:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p><strong>Tip</strong>: Create separate Safari windows in different workspaces. <br/>
+<em>Using workspaces, I can swipe between &lsquo;sets&rsquo; of tabs.</em>
+<em>During development, if I want to keep any additional tabs for a project, they
+may be saved in a Safari bookmarks folder with a project specific name.
+See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
+
+<h3>Open a tab set in window #1:</h3>
+
+<!-- more -->
+
+
+<p><em>Default Safari bookmark folder name &lsquo;RailsDev #1&rsquo;</em></p>
+
+<ul>
+<li><a href="http://blog.shadowcryptic.com">My blog</a> (for my notes) <br/>
+<em>Any look-ups and research will all end up in this window.</em></li>
+</ul>
+
+
+<h3>Open a tab set in window #2:</h3>
+
+<p><em>Default Safari bookmark folder name &lsquo;RailsDev #2&rsquo;</em></p>
+
+<ul>
+<li><p><a href="https://dashboard.heroku.com/apps">Heroku dashboard</a></p></li>
+<li><p>Remote site (served by <a href="https://www.heroku.com/">Heroku</a>):</p>
+
+<pre><code>https://rails-app-name.herokuapp.com
+</code></pre></li>
+<li><p>Local site (served by <a href="http://pow.cx">POW</a>):</p>
+
+<pre><code>http://rails-app-name.dev
+</code></pre></li>
+<li><p>Simplecov results for current project:</p>
+
+<pre><code>file:///path-to-rails-app-directory/coverage/index.html
+</code></pre></li>
+</ul>
+
+
+<h3>Open a tab set in window #3:</h3>
+
+<p><em>Default Safari bookmark folder name &lsquo;RailsDev #3&rsquo;</em></p>
+
+<ul>
+<li><p><a href="http://api.rubyonrails.org/">Rails RDOC</a></p></li>
+<li><p><a href="https://github.com/jnicklas/capybara#the-dsl">Capybara</a></p></li>
+<li><p><a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#getting-started">Factory Girl</a></p></li>
+<li><p><a href="http://faker.rubyforge.org/rdoc/">Faker</a></p></li>
+<li><p>RSpec</p>
+
+<ul>
+<li><a href="https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs">Rails</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-core/v/3-0/docs">Core</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-expectations/v/3-0/docs">Expectations</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-mocks/v/3-0/docs">Mocks</a></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[creating a new heroku rails 4 app]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app/"/>
+    <updated>2014-03-16T23:49:53+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<!-- Start the post with a brief description or introduction that will appear as the
+summary on the index page for the blog posts. -->
+
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<h3>Suppress Ri And Rdoc Documentation</h3>
+
+<p>In file <code>~/.gemrc</code> ensure the following:</p>
+
+<pre><code>install: --no-rdoc --no-ri
+update:  --no-rdoc --no-ri
+</code></pre>
+
+<h3>Setup rvm Initial State &hellip;</h3>
+
+<pre><code>$ rvm use 2.1.1@rails-app-name --create
+</code></pre>
+
+<p><em>At any stage, use <code>$ rvm info</code> to see the current rvm environment.</em></p>
+
+<h3>Ensure Rails 4 Is Installed</h3>
+
+<pre><code>$ rails --version
+Rails 4.0.3
+</code></pre>
+
+<p>If not &hellip;</p>
+
+<pre><code>$ sudo gem install rails --version 4.0.3 --no-ri --no-rdoc
+</code></pre>
+
+<h3>Install Two Gems Initially Required For Heroku</h3>
+
+<pre><code>$ gem install pg rails_12factor
+</code></pre>
+
+<p><em>Postgresql may need installing! See <a href="http://postgresapp.com">Postgres.app</a></em></p>
+
+<h3>Create New Rails App</h3>
+
+<pre><code>$ mkdir rails_projects
+$ cd rails_projects
+$ rails new rails-app-name --database=postgresql --skip-test-unit
+$ cd rails-app-name
+</code></pre>
+
+<p><em><strong>Note</strong>: All commands below are assumed to be invoked from the rails-app-name directory.</em></p>
+
+<p>Open the whole project in an editor &hellip;</p>
+
+<pre><code>$ mate ./
+</code></pre>
+
+<h3>Use rvm Helpers For Project</h3>
+
+<p>For a Rails project, add to the top of the <code>Gemfile</code>:</p>
+
+<pre><code>source 'https://rubygems.org'
+ruby '2.1.1'
+#ruby-gemset=rails-app-name
+</code></pre>
+
+<p><em>rvm will now use these settings each time this app directory is used.</em><br/>
+<em>Note: The Ruby version on the local machine should be the same as a Heroku supported version. See <a href="https://devcenter.heroku.com/articles/ruby-support#ruby-versions">list of Heroku supported ruby-versions</a>.</em></p>
+
+<p><strong>Or</strong>, for rvm to switch Ruby version and gemset for <strong>any</strong> type of project &hellip;</p>
+
+<pre><code>$ cat &gt; .ruby-version &lt;&lt; 2.1.0
+$ cat &gt; .ruby-gemset &lt;&lt; rails-app-name
+$ cat &gt; .rvmrc &lt;&lt; rvm use `cat .ruby-version`@`cat .ruby-gemset`
+$ rvm rvmrc warning ignore all.rvmrcs
+$ source .rvmrc
+</code></pre>
+
+<h3>If Using The <a href="http://pow.cx">POW</a> Rack Server</h3>
+
+<p>Create a <code>.powrc</code> file (if required):</p>
+
+<!--  -->
+
+
+<pre><code>cat &gt; .powrc &lt;&lt; EOF
+if [ -f "$rvm_path/scripts/rvm" ]; then
+  source "$rvm_path/scripts/rvm"
+  rvm use .
+fi
+EOF
+</code></pre>
+
+<p>Add a symlink so POW knows where to serve the project from:</p>
+
+<!--  -->
+
+
+<pre><code>$ ln -is `pwd` ~/.pow/${PWD##*/}
+</code></pre>
+
+<h3>Setup Database(s)</h3>
+
+<p>In the file <code>config/database.yml</code> <strong>REMOVE</strong> from <strong>EACH</strong> db config:</p>
+
+<pre><code>username: rails-app-name
+</code></pre>
+
+<p>and add to each db config:</p>
+
+<pre><code>host: localhost
+port: 5432
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ rake db:create:all
+</code></pre>
+
+<h3>Add Initial Gems For Heroku</h3>
+
+<p>Add heroku requirements to <code>Gemfile</code>:</p>
+
+<pre><code># Heroku
+gem 'rails_12factor', group: :production
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Add A Dynamically Generated Security Token</h3>
+
+<p>Remove standard token and add the following code to the file <code>config/initializers/secret_token.rb</code>:</p>
+
+<pre><code># Comment out the original token...
+# SampleApp::Application.config.secret_key_base = '...a_very_long_ascii_string...'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleApp::Application.config.secret_key_base = secure_token
+</code></pre>
+
+<h3>Enforce HTTPS Connections</h3>
+
+<p>Ensure a line, forcing the use of SSL in production, is uncommented and set to true in <code>config/environments/production.rb</code>:</p>
+
+<pre><code>SampleApp::Application.configure do
+  .
+  .
+  .
+  # Force all access to the app over SSL, use Strict-Transport-Security,
+  # and use secure cookies.
+  config.force_ssl = true
+  .
+  .
+  .
+end
+</code></pre>
+
+<p>Also, set up SSL on the remote server. Configuring a production site to use SSL, among other things, involves purchasing an SSL certificate for the domain.</p>
+
+<p><strong>Note</strong>: SSL is included automatically for applications running on a Heroku domain! To run SSL on a custom domain, see the guide on <a href="https://devcenter.heroku.com/articles/ssl-endpoint">setting up an SSL Endpoint</a>.</p>
+
+<h3>Verify App (So Far)</h3>
+
+<pre><code>$ rails server
+</code></pre>
+
+<p><em>&hellip; visit <a href="http://localhost:3000">locally hosted app</a> in a browser</em> <br/>
+<em>Maybe click the &lsquo;<a href="http://localhost:3000/rails/info/properties">About your application’s environment</a>&rsquo; link to see all is OK!</em>  <br/>
+*<strong>NOTE</strong>: If using the <a href="http://pow.cx">POW</a> Rack server, the app is available locally at <a href="http://rails-app-name.dev*">http://rails-app-name.dev*</a></p>
+
+<h3>Add A Folder To Hold Any App Constants</h3>
+
+<pre><code>$ mkdir config/initializers/constants
+</code></pre>
+
+<p>Add a constants file:</p>
+
+<pre><code>$ touch config/initializers/constants/_site_config.rb
+</code></pre>
+
+<p>Add an ENUMS file (if required) with contents such as:</p>
+
+<pre><code>$ touch config/initializers/constants/_enums.rb
+  # Example ENUM
+  module Role
+    SUPER   = 3
+    ADMIN   = 2
+    USER    = 1
+    PENDING = 0
+  end
+  # Role::ADMIN     # Example use case (site wide)
+</code></pre>
+
+<h3>Add An Initial Index Page (If Required)</h3>
+
+<pre><code>$ rails generate controller Welcome
+
+$ cat &gt; app/views/welcome/index.html.erb &lt;&lt; EOF
+&lt;h2&gt;Hello World&lt;/h2&gt;
+&lt;p&gt;The time is now: &lt;%= Time.now %&gt;&lt;/p&gt;
+EOF
+</code></pre>
+
+<p>In file <code>config/routes.rb</code> ensure &hellip;</p>
+
+<pre><code>root 'welcome#index'
+</code></pre>
+
+<h3>Update The Readme File (If Required)</h3>
+
+<p>Change the inital <code>README.rdoc</code> file extension to use markdown format i.e. <code>README.md</code> and start a description of the app i.e.</p>
+
+<pre><code>#Ruby on Rails: Test application
+
+This is a *Ruby on Rails* test application.
+See the API [API on-line docs](http://api.rubyonrails.org) when stuck!
+
+*By Rob Playford*
+</code></pre>
+
+<h3>Add Git</h3>
+
+<p>Initialise Git repo</p>
+
+<pre><code>$ git init
+</code></pre>
+
+<p>Ensure the file <code>.gitignore</code> has any required additional details such as &hellip;</p>
+
+<pre><code># Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
+.idea
+.secret
+# Mac finder artifacts
+.DS_Store
+# ENV
+.env
+# Simplecov results
+/coverage
+# FactoryGirl
+/spec/factories
+</code></pre>
+
+<p>Make initial commit</p>
+
+<pre><code>$ git add .
+$ git commit -m "Initial commit - Basic Rails 4 app"
+$ git remote add origin git@bitbucket.org:user_name/rails-app-name.git
+$ git push -u origin --all  # pushes up the repo and its refs for the first time
+$ git push -u origin --tags # pushes up any tags
+</code></pre>
+
+<p>Branch</p>
+
+<pre><code>$ git checkout -b topic_branch_description
+</code></pre>
+
+<p><em>Experiment and make changes in a &lsquo;topic&rsquo; branch.</em> <br/>
+<em>The &lsquo;master&rsquo; branch is then insulated from these changes.</em></p>
+
+<p>Commit(s)</p>
+
+<pre><code>$ git add --all
+$ git commit -m "Update the thingamejig"
+</code></pre>
+
+<p><em>Make commits as and when appropriate.</em> <br/>
+<em>Note: Write commit messages in the present tense. Git models commits as a series of patches, so describe what each commit does rather than what it did.</em></p>
+
+<p>See list of current branches</p>
+
+<pre><code>$ git branch
+</code></pre>
+
+<p>Merge</p>
+
+<pre><code>$ git checkout master
+Switched to branch 'master'
+$ git merge topic_branch_description
+</code></pre>
+
+<p><em>Merge the topic branch back into master when topic is complete.</em></p>
+
+<p>To delete the topic branch</p>
+
+<pre><code>$ git branch -d topic_branch_description
+</code></pre>
+
+<p><em><strong>ONLY</strong> tidy up by deleting topic branches <strong>IF</strong> finished with them.</em></p>
+
+<p>Push to remote repo (i.e. GitHub or BitBucket etc)</p>
+
+<pre><code>$ git push -u origin --all
+</code></pre>
+
+<h3>Deploy To Heroku</h3>
+
+<pre><code>$ heroku create
+http://crazy-heroku-name.herokuapp.com/ | git@heroku.com:crazy-heroku-name.git
+Git remote heroku added
+</code></pre>
+
+<p>Verify that the heroku remote was added to your project by running</p>
+
+<pre><code>$ git config -l
+</code></pre>
+
+<p>Rename app (if required)</p>
+
+<pre><code>$ heroku rename rails-app-name
+</code></pre>
+
+<p><em>Maybe choose <code>rails-app-name-dev</code> whilst the app is still in development?</em></p>
+
+<p>Deploy code</p>
+
+<pre><code>$ git push heroku master
+</code></pre>
+
+<p><em>Note: It is always a good idea to check to see if there are any warnings or errors in the output.</em></p>
+
+<p>If everything went well, migrate the database</p>
+
+<pre><code>$ heroku run rake db:migrate
+</code></pre>
+
+<p>&hellip; and visit <a href="https://rails-app-name.herokuapp.com/">remotely hosted app</a> in a browser, or run &hellip;</p>
+
+<pre><code>$ heroku open
+</code></pre>
+
+<p>If you run into any problems getting the app to perform properly, check the logs.</p>
+
+<pre><code>$ heroku logs --tail
+</code></pre>
+
+<p><strong>Note</strong></p>
+
+<ul>
+<li><p><strong>Free</strong> Dyno usage&hellip;<br/>
+<code>$ heroku ps:scale web=1</code> # 750 Free hours (goes into auto sleep after 1 hour)<br/>
+<code>$ heroku ps:scale web=2</code> # 375 Free hours (won&rsquo;t auto sleep after 1 hour)</p></li>
+<li><p>A web dyno that is sleeping continues to accrue usage. To stop accruing usage on an app that is sleeping&hellip;<br/>
+<code>$ heroku ps:scale web=0</code> # scale to 0!</p></li>
+<li><p>To see how many hours an app has used, visit your <a href="https://dashboard.heroku.com/account">account page</a> and look at the current invoice. Under &lsquo;Billing/Current Usage&rsquo; click on &lsquo;details&rsquo;. The resulting invoice allows each app to be clicked on in order to view its &lsquo;Dyno-hours&rsquo; and other billing info.</p></li>
+<li><p>Heroku allows commands to be run on the remote end<br/>
+<code>$ heroku run</code> # <em>followed by whatever command is required</em></p></li>
+</ul>
+
+
+<h3>Add &lsquo;Auto Heroku-App-Version-Number&rsquo; (If Required)</h3>
+
+<p>Add to heroku&rsquo;s requirements in <code>Gemfile</code>:</p>
+
+<pre><code># Heroku
+gem 'heroku-api'
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Add your App name (see <a href="https://dashboard.heroku.com/apps">Apps page</a>) and API key (see <a href="https://dashboard.heroku.com/account">Account page</a>) to the Heroku config:</p>
+
+<pre><code>$ heroku config:add HEROKU_APP_NAME=rails-app-name HEROKU_API_KEY=daa2a90ed0...
+$ touch config/initializers/heroku.rb
+</code></pre>
+
+<p>Then, in file <code>config/initializers/heroku.rb</code> put:</p>
+
+<pre><code>unless (app_name = ENV["HEROKU_APP_NAME"]).nil?
+  require 'heroku-api'
+
+  heroku  = Heroku::API.new(:api_key =&gt; ENV["HEROKU_API_KEY"])
+  release = heroku.get_releases(app_name).body.last
+
+  ENV["HEROKU_RELEASE_NAME"] = release["name"]
+end
+</code></pre>
+
+<p>Finally, use <code>ENV["HEROKU_RELEASE_NAME"]</code> where required within the app&rsquo;s code.</p>
+
+<!--  -->
+
+
+<pre><code>&lt;h2&gt;Welcome to my app
+&lt;%= " - #{ENV["HEROKU_RELEASE_NAME"]}" if ENV["HEROKU_RELEASE_NAME"] %&gt;
+&lt;/h2&gt;
+</code></pre>
+
+<p><em>Alternatively, assign the <code>ENV["HEROKU_RELEASE_NAME"]</code> to a constant and use that throughout the app instead.</em></p>
+
+<h3>Change Server (If Required)</h3>
+
+<p><em>Note: Webrick is the default, so to use a different web server&hellip;</em></p>
+
+<h4>Puma</h4>
+
+<p>Add requirement to <code>Gemfile</code> i.e.</p>
+
+<pre><code># Use Puma as the Rails server 
+gem 'puma'
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+$ touch Procfile
+</code></pre>
+
+<p>The file <code>Procfile</code> should read &hellip;</p>
+
+<pre><code>web: bundle exec puma -p $PORT
+</code></pre>
+
+<p>Setup Environmental Variables, RACK_ENV and PORT.
+The file <code>.env</code> should read &hellip;</p>
+
+<pre><code># Environment
+RAILS_ENV=development
+RACK_ENV=development
+# Port
+PORT=3000
+# local Redis-server
+REDISCLOUD_URL="http://0.0.0.0:6379"
+</code></pre>
+
+<p><em>Note: Before pushing to Heroku, test with RACK_ENV set to production as that&rsquo;s the enviroment Heroku will run the app in!</em></p>
+
+<p>Test the Procfile locally using Foreman. Install Forman with <code>$ gem install foreman</code> if required.</p>
+
+<pre><code>$ foreman start
+</code></pre>
+
+<p><em>Note: Foreman uses the <code>.env</code> file, BUT <code>rails server</code> does not!</em></p>
+
+<p>Deploy changes to Heroku</p>
+
+<pre><code>$ git add --all
+$ git commit -m "use puma via procfile"
+$ git push -u origin                      # optional push to remote repo
+$ git push heroku master
+</code></pre>
+
+<p>Check <code>heroku ps</code>, and note the web process uses the new command specifying Unicorn as the web server</p>
+
+<pre><code>$ heroku ps
+</code></pre>
+
+<h4>Unicorn</h4>
+
+<p>Add requirement to <code>Gemfile</code> i.e.</p>
+
+<pre><code># Use Unicorn as the Rails server
+gem 'unicorn'
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Create a configuration file for Unicorn at <code>config/unicorn.rb</code>:</p>
+
+<pre><code>$ cat &gt; config/unicorn.rb &lt;&lt; EOF
+worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
+timeout 15
+preload_app true
+
+before_fork do |server, worker|
+  Signal.trap 'TERM' do
+    puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
+    Process.kill 'QUIT', Process.pid
+  end
+
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.connection.disconnect!
+end
+
+after_fork do |server, worker|
+  Signal.trap 'TERM' do
+    puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
+  end
+
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
+end
+EOF
+</code></pre>
+
+<p><em>Note: for different setup configuration try <a href="http://unicorn.bogomips.org/Unicorn/Configurator.html">the unicorn onfigurator</a>.</em></p>
+
+<p>The file <code>Procfile</code> (create in the application&rsquo;s root directory if required) should read &hellip;</p>
+
+<pre><code>web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+</code></pre>
+
+<p>Then, as above in Puma setup, set ENV and run with forman!</p>
+
+<h3>Check App In Production Mode <strong>LOCALLY</strong></h3>
+
+<p>The file <code>.env</code> should read &hellip;</p>
+
+<pre><code># Environment
+RAILS_ENV=production
+RACK_ENV=production
+# Port
+PORT=3000
+# local Redis-server
+REDISCLOUD_URL="http://0.0.0.0:6379"
+</code></pre>
+
+<p>When testing the production environment LOCALLY, you have to COMPILE the ASSETS by hand. Simply run the command below:</p>
+
+<pre><code>$ bundle exec rake assets:precompile
+</code></pre>
+
+<p><em>It will generate all the assets under public/assets.</em></p>
+
+<p>Rails has to serve the assets itself too, so change this line to be true in production.rb:</p>
+
+<pre><code>config.serve_static_assets = true
+</code></pre>
+
+<p><em><strong>BUT</strong>!!! make sure you set it back to false before pushing the code to a REAL production environment!</em></p>
+
+<p>Finally, ensure the production database is set before starting the server &hellip;</p>
+
+<pre><code>$ rake db:create
+$ foreman start
+</code></pre>
+
+<h3>Check App In Development Mode <strong>LOCALLY</strong></h3>
+
+<p>The file <code>.env</code> should read &hellip;</p>
+
+<pre><code># Environment
+RAILS_ENV=development
+RACK_ENV=development
+# Port
+PORT=3000
+# local Redis-server
+REDISCLOUD_URL="http://0.0.0.0:6379"
+</code></pre>
+
+<p>Ensure the development database is set before starting the server &hellip;</p>
+
+<pre><code>$ rake db:create
+$ foreman start
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
