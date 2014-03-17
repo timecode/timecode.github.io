@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T00:14:22+00:00</updated>
+  <updated>2014-03-17T09:23:33+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[rails development bookmarks]]></title>
+    <link href="http://blog.shadowcryptic.com/blog/2014/03/17/rails-dev-bookmarks/"/>
+    <updated>2014-03-17T08:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/blog/2014/03/17/rails-dev-bookmarks</id>
+    <content type="html"><![CDATA[<p><strong>Tip</strong>: Open windows in multiple browsers. <br/>
+<em>Using multiple browsers (or browser instances) means I can <code>cmd-tab</code> between the window &lsquo;sets&rsquo;!</em></p>
+
+<h3>Open this tab set in window #1 (Firefox):</h3>
+
+<ul>
+<li><a href="http://blog.shadowcryptic.com">My blog</a> (for my notes) <br/>
+<em>Any look-ups and research will all end up in this window.</em></li>
+</ul>
+
+
+<h3>Open this tab set in window #2 (Safari):</h3>
+
+<ul>
+<li><p><a href="https://dashboard.heroku.com/apps">Heroku dashboard</a></p></li>
+<li><p>Remote site (served by <a href="https://www.heroku.com/">Heroku</a>):</p>
+
+<pre><code>https://rails-app-name.herokuapp.com
+</code></pre></li>
+<li><p>Local site (served by <a href="http://pow.cx">POW</a>):</p>
+
+<pre><code>http://rails-app-name.dev
+</code></pre></li>
+<li><p>Simplecov results for current project:</p>
+
+<pre><code>file:///path-to-rails-app-directory/coverage/index.html
+</code></pre></li>
+</ul>
+
+
+<h3>Open this tab set in window #3 (Chrome):</h3>
+
+<ul>
+<li><p><a href="http://api.rubyonrails.org/">Rails RDOC</a></p></li>
+<li><p><a href="https://github.com/jnicklas/capybara#the-dsl">Capybara</a></p></li>
+<li><p><a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#getting-started">Factory Girl</a></p></li>
+<li><p><a href="http://faker.rubyforge.org/rdoc/">Faker</a></p></li>
+<li><p>RSpec</p>
+
+<ul>
+<li><a href="https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs">Rails</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-core/v/3-0/docs">Core</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-expectations/v/3-0/docs">Expectations</a></li>
+<li><a href="https://www.relishapp.com/rspec/rspec-mocks/v/3-0/docs">Mocks</a></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[making pages look nice]]></title>
+    <link href="http://blog.shadowcryptic.com/blog/2014/03/17/making-pages-look-nice/"/>
+    <updated>2014-03-17T08:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/blog/2014/03/17/making-pages-look-nice</id>
+    <content type="html"><![CDATA[<p>Check out the following</p>
+
+<ul>
+<li><a href="http://24ways.org/2012/how-to-make-your-site-look-half-decent/">How to Make Your Site Look Half-Decent in Half an Hour</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating A New Heroku Rails 4 App]]></title>
