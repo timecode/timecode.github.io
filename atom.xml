@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T09:31:33+00:00</updated>
+  <updated>2014-03-17T14:49:09+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -84,13 +84,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Creating A New Heroku Rails 4 App]]></title>
+    <title type="html"><![CDATA[creating a new heroku rails 4 app]]></title>
     <link href="http://blog.shadowcryptic.com/blog/2014/03/16/creating-a-new-heroku-rails-4-app/"/>
     <updated>2014-03-16T23:49:53+00:00</updated>
     <id>http://blog.shadowcryptic.com/blog/2014/03/16/creating-a-new-heroku-rails-4-app</id>
     <content type="html"><![CDATA[<p><em>View or edit the markdown in this file using the <a href="http://mouapp.com/">Mou app</a> or online at <a href="http://dillinger.io">dillinger.io</a></em></p>
 
-<h2>Suppress Ri And Rdoc Documentation</h2>
+<h3>Suppress Ri And Rdoc Documentation</h3>
 
 <p>In file <code>~/.gemrc</code> ensure the following:</p>
 
@@ -98,14 +98,14 @@
 update:  --no-rdoc --no-ri
 </code></pre>
 
-<h2>Setup rvm Initial State &hellip;</h2>
+<h3>Setup rvm Initial State &hellip;</h3>
 
 <pre><code>$ rvm use 2.1.1@rails-app-name --create
 </code></pre>
 
 <p><em>At any stage, use <code>$ rvm info</code> to see the current rvm environment.</em></p>
 
-<h2>Ensure Rails 4 Is Installed</h2>
+<h3>Ensure Rails 4 Is Installed</h3>
 
 <pre><code>$ rails --version
 Rails 4.0.3
@@ -116,14 +116,14 @@ Rails 4.0.3
 <pre><code>$ sudo gem install rails --version 4.0.3 --no-ri --no-rdoc
 </code></pre>
 
-<h2>Install Two Gems Initially Required For Heroku</h2>
+<h3>Install Two Gems Initially Required For Heroku</h3>
 
 <pre><code>$ gem install pg rails_12factor
 </code></pre>
 
 <p><em>Postgresql may need installing! See <a href="http://postgresapp.com">Postgres.app</a></em></p>
 
-<h2>Create New Rails App</h2>
+<h3>Create New Rails App</h3>
 
 <pre><code>$ mkdir rails_projects
 $ cd rails_projects
@@ -138,7 +138,7 @@ $ cd rails-app-name
 <pre><code>$ mate ./
 </code></pre>
 
-<h2>Use rvm Helpers For Project</h2>
+<h3>Use rvm Helpers For Project</h3>
 
 <p>For a Rails project, add to the top of the <code>Gemfile</code>:</p>
 
@@ -159,7 +159,7 @@ $ rvm rvmrc warning ignore all.rvmrcs
 $ source .rvmrc
 </code></pre>
 
-<h2>If Using The <a href="http://pow.cx">POW</a> Rack Server</h2>
+<h3>If Using The <a href="http://pow.cx">POW</a> Rack Server</h3>
 
 <p>Create a <code>.powrc</code> file (if required):</p>
 
@@ -182,7 +182,7 @@ EOF
 <pre><code>$ ln -is `pwd` ~/.pow/${PWD##*/}
 </code></pre>
 
-<h2>Setup Database(s)</h2>
+<h3>Setup Database(s)</h3>
 
 <p>In the file <code>config/database.yml</code> <strong>REMOVE</strong> from <strong>EACH</strong> db config:</p>
 
@@ -200,7 +200,7 @@ port: 5432
 <pre><code>$ rake db:create:all
 </code></pre>
 
-<h2>Add Initial Gems For Heroku</h2>
+<h3>Add Initial Gems For Heroku</h3>
 
 <p>Add heroku requirements to <code>Gemfile</code>:</p>
 
@@ -213,7 +213,7 @@ gem 'rails_12factor', group: :production
 <pre><code>$ bundle install
 </code></pre>
 
-<h2>Add A Dynamically Generated Security Token</h2>
+<h3>Add A Dynamically Generated Security Token</h3>
 
 <p>Remove standard token and add the following code to the file <code>config/initializers/secret_token.rb</code>:</p>
 
@@ -238,7 +238,7 @@ end
 SampleApp::Application.config.secret_key_base = secure_token
 </code></pre>
 
-<h2>Enforce HTTPS Connections</h2>
+<h3>Enforce HTTPS Connections</h3>
 
 <p>Ensure a line, forcing the use of SSL in production, is uncommented and set to true in <code>config/environments/production.rb</code>:</p>
 
@@ -259,7 +259,7 @@ end
 
 <p><strong>Note</strong>: SSL is included automatically for applications running on a Heroku domain! To run SSL on a custom domain, see the guide on <a href="https://devcenter.heroku.com/articles/ssl-endpoint">setting up an SSL Endpoint</a>.</p>
 
-<h2>Verify App (So Far)</h2>
+<h3>Verify App (So Far)</h3>
 
 <pre><code>$ rails server
 </code></pre>
@@ -268,7 +268,7 @@ end
 <em>Maybe click the &lsquo;<a href="http://localhost:3000/rails/info/properties">About your application’s environment</a>&rsquo; link to see all is OK!</em>  <br/>
 *<strong>NOTE</strong>: If using the <a href="http://pow.cx">POW</a> Rack server, the app is available locally at <a href="http://rails-app-name.dev*">http://rails-app-name.dev*</a></p>
 
-<h2>Add A Folder To Hold Any App Constants</h2>
+<h3>Add A Folder To Hold Any App Constants</h3>
 
 <pre><code>$ mkdir config/initializers/constants
 </code></pre>
@@ -291,7 +291,7 @@ end
   # Role::ADMIN     # Example use case (site wide)
 </code></pre>
 
-<h2>Add An Initial Index Page (If Required)</h2>
+<h3>Add An Initial Index Page (If Required)</h3>
 
 <pre><code>$ rails generate controller Welcome
 
@@ -306,7 +306,7 @@ EOF
 <pre><code>root 'welcome#index'
 </code></pre>
 
-<h2>Update The Readme File (If Required)</h2>
+<h3>Update The Readme File (If Required)</h3>
 
 <p>Change the inital <code>README.rdoc</code> file extension to use markdown format i.e. <code>README.md</code> and start a description of the app i.e.</p>
 
@@ -318,7 +318,7 @@ See the API [API on-line docs](http://api.rubyonrails.org) when stuck!
 *By Rob Playford*
 </code></pre>
 
-<h2>Add Git</h2>
+<h3>Add Git</h3>
 
 <p>Initialise Git repo</p>
 
@@ -397,7 +397,7 @@ $ git merge topic_branch_description
 <pre><code>$ git push -u origin --all
 </code></pre>
 
-<h2>Deploy To Heroku</h2>
+<h3>Deploy To Heroku</h3>
 
 <pre><code>$ heroku create
 http://crazy-heroku-name.herokuapp.com/ | git@heroku.com:crazy-heroku-name.git
@@ -452,7 +452,7 @@ Git remote heroku added
 </ul>
 
 
-<h2>Add &lsquo;Auto Heroku-App-Version-Number&rsquo; (If Required)</h2>
+<h3>Add &lsquo;Auto Heroku-App-Version-Number&rsquo; (If Required)</h3>
 
 <p>Add to heroku&rsquo;s requirements in <code>Gemfile</code>:</p>
 
@@ -495,11 +495,11 @@ end
 
 <p><em>Alternatively, assign the <code>ENV["HEROKU_RELEASE_NAME"]</code> to a constant and use that throughout the app instead.</em></p>
 
-<h2>Change Server (If Required)</h2>
+<h3>Change Server (If Required)</h3>
 
 <p><em>Note: Webrick is the default, so to use a different web server&hellip;</em></p>
 
-<h3>Puma</h3>
+<h4>Puma</h4>
 
 <p>Add requirement to <code>Gemfile</code> i.e.</p>
 
@@ -552,7 +552,7 @@ $ git push heroku master
 <pre><code>$ heroku ps
 </code></pre>
 
-<h3>Unicorn</h3>
+<h4>Unicorn</h4>
 
 <p>Add requirement to <code>Gemfile</code> i.e.</p>
 
@@ -602,7 +602,7 @@ EOF
 
 <p>Then, as above in Puma setup, set ENV and run with forman!</p>
 
-<h2>Check App In Production Mode <strong>LOCALLY</strong></h2>
+<h3>Check App In Production Mode <strong>LOCALLY</strong></h3>
 
 <p>The file <code>.env</code> should read &hellip;</p>
 
@@ -635,7 +635,7 @@ REDISCLOUD_URL="http://0.0.0.0:6379"
 $ foreman start
 </code></pre>
 
-<h2>Check App In Development Mode <strong>LOCALLY</strong></h2>
+<h3>Check App In Development Mode <strong>LOCALLY</strong></h3>
 
 <p>The file <code>.env</code> should read &hellip;</p>
 
