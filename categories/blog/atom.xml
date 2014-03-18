@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: blog | shadowcryptic#blog]]></title>
+  <title><![CDATA[Category: Blog | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/blog/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T20:50:50+00:00</updated>
+  <updated>2014-03-18T11:00:27+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,33 @@
 
   
   <entry>
-    <title type="html"><![CDATA[new ocotopress themes]]></title>
+    <title type="html"><![CDATA[Get Google Search Working on Octopress Site]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/14/get-google-search-working-on-octopress-site/"/>
+    <updated>2014-03-14T12:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/14/get-google-search-working-on-octopress-site</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<p>Google serach not returning any results for Octopress&rsquo;s built-in search field?</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Octopress has a built-in search field that passes its duties on to Google (by default). After install of a new blog, if it&rsquo;s hosted at a new domain or subdomain, Google may need to be told about it. Follow the steps at <a href="http://www.google.com/webmasters/">Google Webmaster Tools</a> to get started.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New Ocotopress Themes]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/"/>
     <updated>2014-03-14T11:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes</id>
@@ -57,7 +83,7 @@ summary on the index page for the blog posts. -->
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[octopress notes]]></title>
+    <title type="html"><![CDATA[Octopress Notes]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/14/octopress-notes/"/>
     <updated>2014-03-14T10:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/14/octopress-notes</id>
@@ -99,7 +125,7 @@ $ mate octopress/Gemfile
 <p>Move into the directory and pull it up in an editor</p>
 
 <pre><code>$ cd octopress
-$ mate ./
+$ subl ./
 $ bundle install
 $ rake install
 </code></pre>

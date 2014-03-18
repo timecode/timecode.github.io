@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: markdown | shadowcryptic#blog]]></title>
+  <title><![CDATA[Category: Markdown | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/markdown/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T20:50:50+00:00</updated>
+  <updated>2014-03-18T11:00:27+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[markdown notes]]></title>
+    <title type="html"><![CDATA[Markdown Notes]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/16/markdown-notes/"/>
     <updated>2014-03-16T11:27:22+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/16/markdown-notes</id>
@@ -104,7 +104,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[markdown cheatsheet]]></title>
+    <title type="html"><![CDATA[Markdown Cheatsheet]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet/"/>
     <updated>2014-03-15T13:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet</id>
@@ -630,7 +630,7 @@ This line is only separated by a single newline, so it&rsquo;s a separate line i
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[new ocotopress themes]]></title>
+    <title type="html"><![CDATA[New Ocotopress Themes]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/"/>
     <updated>2014-03-14T11:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes</id>
@@ -673,7 +673,7 @@ summary on the index page for the blog posts. -->
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[scriptogram]]></title>
+    <title type="html"><![CDATA[Scriptogram]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/13/scriptogram/"/>
     <updated>2014-03-13T11:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/13/scriptogram</id>

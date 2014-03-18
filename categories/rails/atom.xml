@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: rails | shadowcryptic#blog]]></title>
+  <title><![CDATA[Category: Rails | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T20:50:50+00:00</updated>
+  <updated>2014-03-18T11:00:27+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,612 @@
 
   
   <entry>
-    <title type="html"><![CDATA[rails development bookmarks]]></title>
+    <title type="html"><![CDATA[Setting Up My Rails BDD Stack]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/17/setting-up-my-rails-bdd-stack/"/>
+    <updated>2014-03-17T20:31:11+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/17/setting-up-my-rails-bdd-stack</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>My guide to setting up a BDD stack for a rails app&hellip;</p>
+
+<p>I initially followed this <a href="https://semaphoreapp.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html">Rails 4 BDD article</a>, however, I&rsquo;ve had to make a lot of changes and additions to get things how I want them.</p>
+
+<p>Other useful bits of infornation discovered along the way came from articles <a href="http://www.startuprocket.com/introduction-to-app-development">Introduction to App Development</a> and <a href="http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit">How to setup a Rails app for Test-Driven- and Behavior-Driven Development with Rspec and Capybara-Webkit</a>.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p><strong>Note</strong>: The following steps describe the install of individual parts of the stack. It&rsquo;s best to follow the order as shown.</p>
+
+<p><em>See Summary at end for &lsquo;all-at-once&rsquo; install</em></p>
+
+<h3>INSTALL RSpec</h3>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :development, :test do
+gem 'rspec-rails', '~&gt; 2.0'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Bootstrap the app with RSpec by generating its support files and directories:</p>
+
+<pre><code>$ rails generate rspec:install
+</code></pre>
+
+<p>Create the RSpec binstub. The binstub will allow you to run RSpec with <code>rspec</code> instead of <code>bundle exec rspec</code>:</p>
+
+<pre><code>$ bundle binstubs rspec-core
+</code></pre>
+
+<p>Edit the <code>.rspec</code> file and change the default formatting to:</p>
+
+<pre><code>--color --format doc
+</code></pre>
+
+<h3>INSTALL shoulda-matchers</h3>
+
+<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superflous.</em></p>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'shoulda-matchers'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>INSTALL Factory Girl</h3>
+
+<p>Factory Girl is “a library for setting up Ruby objects as test data” or more precisely it is a fixtures replacement. <em>See <a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Factory Girl docs</a> for useage.</em></p>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :development, :test do
+  gem 'factory_girl_rails'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Add to RSpec&rsquo;s <code>spec_helper.rb</code> file:</p>
+
+<pre><code>RSpec.configure do |config|
+  .
+  .
+  .
+  # Factory Girl
+  config.include FactoryGirl::Syntax::Methods
+
+end
+</code></pre>
+
+<p>Add to Cucumber&rsquo;s <code>env.rb</code> file:</p>
+
+<pre><code>  .
+  .
+  .
+  # Factory Girl
+  World(FactoryGirl::Syntax::Methods)
+</code></pre>
+
+<h3>INSTALL Faker</h3>
+
+<p>Faker allows creation of sample users with semi-realistic names and email addresses    .
+Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'faker'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>For example, to add a Rake task for populating the database with sample users:
+Create file <code>lib/tasks/sample_data.rake</code>:</p>
+
+<pre><code>namespace :db do
+  desc "Fill database with sample data"
+  task populate: :environment do
+    # To add a specific user
+    User.create!(name: "Example User",
+                 email: "example@railstutorial.org",
+                 password: "foobar",
+                 password_confirmation: "foobar")
+    # To add many users
+    99.times do |n|
+      name  = Faker::Name.name
+      email = "example-#{n+1}@railstutorial.org"
+      password  = "password"
+      User.create!(name: name,
+                   email: email,
+                   password: password,
+                   password_confirmation: password)
+    end
+  end
+end
+</code></pre>
+
+<p><em>This defines a task <code>db:populate</code> that creates an example user and 99 more.</em></p>
+
+<p>Invoke the Rake task as follows:</p>
+
+<pre><code>$ rake db:reset
+$ rake db:populate
+$ rake test:prepare
+</code></pre>
+
+<p><em><strong>NOTE</strong>: See the <a href="http://faker.rubyforge.org/rdoc/">Faker docs</a> for full fakabilities!</em></p>
+
+<h3>INSTALL Database Cleaner</h3>
+
+<p>Database Cleaner ensures a clean database state for testing.   <br/>
+Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'database_cleaner'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Modify the file <code>spec/spec_helper.rb</code> to add Database Cleaner before the final end</p>
+
+<pre><code>$ .
+  .
+  .
+  RSpec.configure do |config|
+  .
+  .
+  .
+    # Database Cleaner
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+    end
+    config.before(:each) do
+      DatabaseCleaner.start
+      FactoryGirl.lint            # if FactoryGirl is installed !!!
+    end
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
+  end
+</code></pre>
+
+<p>Also, modify Cucumber&rsquo;s <code>env.rb</code> file and add the <em><strong>LAST LINE</strong></em> in the following listing:</p>
+
+<pre><code>.
+.
+.
+# Possible values are :truncation and :transaction
+# The :transaction strategy is faster, but might give you threading problems.
+# See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
+Cucumber::Rails::Database.javascript_strategy = :truncation
+DatabaseCleaner.clean_with(:truncation)
+</code></pre>
+
+<p>The <a href="https://github.com/bmabey/database_cleaner#rspec-example">RSpec example</a> on the gem site didn&rsquo;t seem to work but the one I&rsquo;ve shown here does! <br/>
+The <a href="https://github.com/bmabey/database_cleaner#cucumber-example">Cucumber example</a> mentions that it gets setup Cucumber by default <em><strong>AS LONG AS</strong>_</em> it&rsquo;s present before Cucumber gets bootstrapped!*</p>
+
+<h3>INSTALL Cucumber</h3>
+
+<p>Cucumber helps us both focus on the feature-level and as a high-level integration testing tool.   <br/>
+Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'cucumber-rails', require: false
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Bootstrap the app with Cucumber by generating its support files and directories:</p>
+
+<pre><code>$ rails generate cucumber:install
+</code></pre>
+
+<p>Create the Cucumber binstub. The binstub will allow you to run Cucumber with <code>cucumber</code> instead of <code>bundle exec cucumber</code></p>
+
+<pre><code>$ bundle binstubs cucumber
+</code></pre>
+
+<p><em>See the <a href="https://github.com/jnicklas/capybara#using-capybara-with-cucumber">Capybara API</a> for details of how to compose feature steps!</em></p>
+
+<p>I add two files to Cucumber&rsquo;s features directory to start with &hellip; <br/>
+The first is <code>support/paths.rb</code>:</p>
+
+<pre><code># features/support/paths.rb
+def path_to(page_name)
+
+  case page_name
+
+  # when /^about\s?page$/
+  #   then "/static_pages/about"  # example verbose
+  when /^home\s?page$/
+    then static_pages_home_path   # example using routes
+  when /^help\s?page$/
+    then static_pages_help_path   # example using routes
+  when /^about\s?page$/
+    then static_pages_about_path   # example using routes
+  # Add more mappings here.
+  # Here is an example that pulls values out of the Regexp:
+  #
+  #   when /^(.*)'s profile page$/i
+  #     user_profile_path(User.find_by_login($1))
+
+  else
+    begin
+      # try and match to a path in the rails routes
+      page_name =~ /^(.*\s?page)$/
+      path_components = $1.split(/\s+/)
+      self.send(path_components.push('path').join('_').to_sym)
+    rescue NoMethodError, ArgumentError
+      raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+        "Now, go and add a mapping in #{__FILE__}"
+    end
+  end
+end
+</code></pre>
+
+<p>The second is <code>step_definitions/common_steps.rb</code>:</p>
+
+<pre><code># features/step_definitions/common_steps.rb
+# See the Capybara API for usage
+# https://github.com/jnicklas/capybara#clicking-links-and-buttons
+
+When(/^I (go to|visit) the (.*?)$/) do |parlance, page|
+  visit(path_to(page))
+end
+
+Then(/^I should see "(.*?)"$/) do |text|
+  page.should have_content(text)
+end
+</code></pre>
+
+<h3>INSTALL selenium-webdriver</h3>
+
+<p><em><strong>TODO</strong>: capybara-webkit ??? Possible alternative?</em>
+To be able to run Cucumber scenarios which use Javascript you need selenium-webdriver.</p>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'selenium-webdriver'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>INSTALL Spring</h3>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :development, :test do
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Bootstrap Spring (this should be done after installing anything that gets put into <code>bin/</code>, such as Rspec, Cucumber, etc):</p>
+
+<pre><code>$ spring binstub --all
+</code></pre>
+
+<p>When using Spring with Guard (see below), ensure it is included in each <code>guard</code> listed in the <code>Guardfile</code>, for example:</p>
+
+<pre><code>guard :rspec, cmd:"spring rspec" do
+.
+.
+.
+</code></pre>
+
+<p>If required (not usually), Spring&rsquo;s status can be checked with:</p>
+
+<pre><code>$ spring status
+</code></pre>
+
+<p>Also, if required, Spring&rsquo;s can be stopped with:</p>
+
+<pre><code>$ spring stop
+</code></pre>
+
+<h3>INSTALL SimpleCov</h3>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'simplecov', require: false
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Load and launch SimpleCov at the very top of your <code>test/test_helper.rb</code> <br/>
+<em>(or <code>spec_helper.rb</code>, cucumber <code>env.rb</code>, or whatever your preferred test framework uses):</em></p>
+
+<pre><code>require 'simplecov' # if using simple simplecov
+# see https://github.com/colszowka/simplecov#filters for filter/grouping etc
+SimpleCov.start do  # for example...
+  add_filter '/spec/'
+  add_filter '/features/'
+  add_filter '/config/'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Models', 'app/models'
+  add_group 'Helpers', 'app/helpers'
+  # add_group 'Views', 'app/views' # only .rb files are included at present!
+  add_group 'Libraries', 'lib'
+end
+# Previous content of helper now start here
+</code></pre>
+
+<p>Ensure the <code>.gitignore</code> file includes:</p>
+
+<pre><code># Simplecov results
+/coverage
+</code></pre>
+
+<p><em>See <a href="https://github.com/colszowka/simplecov#configuring-simplecov">Configuring SimpleCov</a></em></p>
+
+<h3>INSTALL Guard</h3>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :development, :test do
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-puma' # to have Guard use the Puma server rather than WEBrick
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Generate an initial <code>Guardfile</code> with:</p>
+
+<pre><code>$ guard init
+</code></pre>
+
+<p>Ensure guard details, similar to my prefered settings below, are in <code>Guardfile</code></p>
+
+<pre><code># A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard :bundler do
+  # https://github.com/guard/guard-bundler
+  watch('Gemfile')
+  # Uncomment next line if your Gemfile contains the `gemspec' command.
+  # watch(/^.+\.gemspec/)
+end
+
+guard :rails do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
+guard :puma do
+  watch('Gemfile.lock')
+  watch(%r{^config|lib|api/.*})
+end
+
+guard :rspec,
+    all_on_start: false,
+    all_after_pass: false,
+    cmd: 'time spring rspec --format progress' do
+
+  # https://github.com/guard/guard-rspec
+
+  watch(%r{^spec/.+_spec\.rb$})
+  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
+  watch('spec/spec_helper.rb')  { "spec" }
+
+  # Rails example
+  watch(%r{^app/(.+)\.rb$})                           { |m|
+    "spec/#{m[1]}_spec.rb" }
+  watch(%r{^app/(.*)(\.erb|\.haml|\.slim)$})          { |m|
+    "spec/#{m[1]}#{m[2]}_spec.rb" }
+  watch(%r{^app/controllers/(.+)_(controller)\.rb$})  { |m|
+    ["spec/routing/#{m[1]}_routing_spec.rb",
+    "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb",
+    "spec/acceptance/#{m[1]}_spec.rb"] }
+  watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
+  watch('config/routes.rb')                           { "spec/routing" }
+  watch('app/controllers/application_controller.rb')  { "spec/controllers" }
+
+  # Capybara features specs
+  watch(%r{^app/views/(.+)/.*\.(erb|haml|slim)$})     { |m|
+    "spec/features/#{m[1]}_spec.rb" }
+
+  # Turnip features and steps
+  watch(%r{^spec/acceptance/(.+)\.feature$})
+  watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m|
+    Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
+end
+
+guard :cucumber,
+    all_on_start: false,
+    all_after_pass: false,
+    change_format: 'pretty',
+    binstubs: true,
+    command_prefix: 'time',
+    cli: '--format progress --strict' do
+
+  # https://github.com/guard/guard-cucumber
+
+  watch(%r{^features/.+\.feature$})
+  watch(%r{^features/support/.+$})          { 'features' }
+  watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m|
+    Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
+
+  # Capybara features specs
+  watch(%r{^app/views/.*})          { 'features' }
+  watch(%r{^app/controllers/.*})    { 'features' }
+end
+</code></pre>
+
+<p>Run Guard (through Bundler) in a separate terminal window:</p>
+
+<pre><code>$ bundle exec guard
+</code></pre>
+
+<p><em>See <a href="https://github.com/guard/guard">guard</a></em> <br/>
+<em>See <a href="https://github.com/guard/guard-bundler">guard-bundler</a></em> <br/>
+<em>See <a href="https://github.com/guard/guard-rails">guard-rails</a></em> <br/>
+<em>See <a href="https://github.com/guard/guard-rspec">guard-rspec</a></em> <br/>
+<em>See <a href="https://github.com/guard/guard-cucumber">guard-cucumber</a></em>  <br/>
+<em>See <a href="https://github.com/jc00ke/guard-puma">guard-puma</a></em></p>
+
+<h2>SUMMARY</h2>
+
+<p><em>Install RSpec, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
+
+<p>Add to <code>Gemfile</code>:</p>
+
+<pre><code># BDD
+gem 'faker'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
+  gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-puma' # to have Guard use the Puma server rather than WEBrick
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Bootstrap the app with RSpec and Cucumber by generating their support files and directories:</p>
+
+<pre><code>$ rails generate rspec:install
+$ rails generate cucumber:install
+</code></pre>
+
+<p>Create the RSpec and Cucumber binstub. The binstubs allow you to run RSpec and Cucumber with <code>rspec</code> and <code>cucumber</code> instead of <code>bundle exec rspec</code> and <code>bundle exec cucumber</code>. They will both be modified by the <code>spring binstub</code> command, so run that one last!:</p>
+
+<pre><code>$ bundle binstubs rspec-core
+$ bundle binstubs cucumber
+$ spring binstub --all
+</code></pre>
+
+<p>Edit the file <code>.rspec</code> and change the default formatting to:</p>
+
+<pre><code>--color --format doc
+</code></pre>
+
+<p>Load and launch SimpleCov at the very top of your <code>test/test_helper.rb</code> <br/>
+<em>(or <code>spec_helper.rb</code>, cucumber <code>env.rb</code>, or whatever your preferred test framework uses):</em></p>
+
+<pre><code>require 'simplecov' # if using simple simplecov
+# see https://github.com/colszowka/simplecov#filters for filter/grouping etc
+SimpleCov.start do  # for example...
+  add_filter '/spec/'
+  add_filter '/features/'
+  add_filter '/config/'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Models', 'app/models'
+  add_group 'Helpers', 'app/helpers'
+  # add_group 'Views', 'app/views' # only .rb files are included at present!
+  add_group 'Libraries', 'lib'
+end
+# This should be the default now, but just in case ...
+# SimpleCov.use_merging true
+# Previous content of helper now start here
+</code></pre>
+
+<p>add to <code>.gitignore</code> file:</p>
+
+<pre><code># Simplecov results
+/coverage
+</code></pre>
+
+<p>Generate an initial <code>Guardfile</code> with:</p>
+
+<pre><code>$ guard init
+</code></pre>
+
+<p><em>See instructions in Guard&rsquo;s individual install (above) regarding <strong>MY</strong> preferred <code>Guardfile</code> contents</em></p>
+
+<p>Run Guard (through Bundler) in a separate terminal window:</p>
+
+<pre><code>$ bundle exec guard
+</code></pre>
+
+<p><strong>Note</strong>: To run Rspec and Cucumber, just issue <code>rake</code> at the coomand line. The format should be verbose (doc / pretty)! During regular Guard runs the format should be minimal (progress dots only, unless there are failures of course, in which case the settings above provide for a temporarily detailed output).</p>
+
+<p>Make git commit</p>
+
+<pre><code>$ git add .
+$ git commit -m "Add BDD stack"
+$ git push -u origin --all
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Development Bookmarks]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/"/>
     <updated>2014-03-17T08:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks</id>
@@ -101,7 +706,7 @@ See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[creating a new heroku rails 4 app]]></title>
+    <title type="html"><![CDATA[Creating a New Heroku Rails 4 App]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app/"/>
     <updated>2014-03-16T23:49:53+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app</id>

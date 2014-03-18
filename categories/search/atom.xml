@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Search | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/search/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-18T11:00:27+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Get Google Search Working on Octopress Site]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/14/get-google-search-working-on-octopress-site/"/>
+    <updated>2014-03-14T12:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/14/get-google-search-working-on-octopress-site</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<p>Google serach not returning any results for Octopress&rsquo;s built-in search field?</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Octopress has a built-in search field that passes its duties on to Google (by default). After install of a new blog, if it&rsquo;s hosted at a new domain or subdomain, Google may need to be told about it. Follow the steps at <a href="http://www.google.com/webmasters/">Google Webmaster Tools</a> to get started.</p>
+]]></content>
+  </entry>
+  
+</feed>

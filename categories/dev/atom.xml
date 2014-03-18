@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: dev | shadowcryptic#blog]]></title>
+  <title><![CDATA[Category: Dev | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/dev/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-17T20:50:50+00:00</updated>
+  <updated>2014-03-18T11:00:27+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[rails development bookmarks]]></title>
+    <title type="html"><![CDATA[Rails Development Bookmarks]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/"/>
     <updated>2014-03-17T08:00:00+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks</id>
@@ -101,7 +101,7 @@ See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[creating a new heroku rails 4 app]]></title>
+    <title type="html"><![CDATA[Creating a New Heroku Rails 4 App]]></title>
     <link href="http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app/"/>
     <updated>2014-03-16T23:49:53+00:00</updated>
     <id>http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app</id>
