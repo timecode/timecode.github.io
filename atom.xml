@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-18T12:17:37+00:00</updated>
+  <updated>2014-03-18T13:27:37+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -134,19 +134,20 @@ $ git clone git://github.com/npverni/cucumber-sublime2-bundle.git Cucumber
 
 <p>My guide to setting up a BDD stack for a rails app&hellip;</p>
 
-<p>I initially followed this <a href="https://semaphoreapp.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html">Rails 4 BDD article</a>, however, I&rsquo;ve had to make a lot of changes and additions to get things how I want them.</p>
-
-<p>Other useful bits of infornation discovered along the way came from articles <a href="http://www.startuprocket.com/introduction-to-app-development">Introduction to App Development</a> and <a href="http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit">How to setup a Rails app for Test-Driven- and Behavior-Driven Development with Rspec and Capybara-Webkit</a>.</p>
-
 <!-- /Post description -->
 
 
 <!-- more -->
 
 
-<p><strong>Note</strong>: The following steps describe the install of individual parts of the stack. It&rsquo;s best to follow the order as shown.</p>
+<p>I initially followed this <a href="https://semaphoreapp.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html">Rails 4 BDD article</a>, however, I&rsquo;ve made a lot of changes to get things how I want them.</p>
 
-<p><em>See Summary at end for &lsquo;all-at-once&rsquo; install</em></p>
+<p><em>Other useful bits of information discovered along the way came from articles <a href="http://www.startuprocket.com/introduction-to-app-development">Introduction to App Development</a> and <a href="http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit">How to setup a Rails app for Test-Driven- and Behavior-Driven Development with Rspec and Capybara-Webkit</a>.</em></p>
+
+<h2>Install Of Individual Components</h2>
+
+<p><strong>Note</strong>: <em>See <a href="#summary">Summary</a> at end for &lsquo;all-at-once&rsquo; install</em> <br/>
+The following steps describe the install of individual parts of the stack. It&rsquo;s best to follow the order as shown.</p>
 
 <h3>INSTALL RSpec</h3>
 
@@ -179,7 +180,7 @@ end
 
 <h3>INSTALL shoulda-matchers</h3>
 
-<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superflous.</em></p>
+<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superfluous.</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -195,7 +196,7 @@ end
 
 <h3>INSTALL Factory Girl</h3>
 
-<p>Factory Girl is “a library for setting up Ruby objects as test data” or more precisely it is a fixtures replacement. <em>See <a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Factory Girl docs</a> for useage.</em></p>
+<p>Factory Girl is &ldquo;a library for setting up Ruby objects as test data&rdquo; or more precisely it is a fixtures replacement. <em>See <a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Factory Girl docs</a> for usage.</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -622,7 +623,9 @@ end
 <em>See <a href="https://github.com/guard/guard-cucumber">guard-cucumber</a></em>  <br/>
 <em>See <a href="https://github.com/jc00ke/guard-puma">guard-puma</a></em></p>
 
-<h2>SUMMARY</h2>
+<p><a name="summary"></a></p>
+
+<h2>Summary</h2>
 
 <p><em>Install RSpec, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
 
@@ -740,9 +743,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>I have some preset set of tabs that I like to have open before I start developing.</p>
 
 <!-- /Post description -->
 
@@ -753,10 +754,10 @@ summary on the index page for the blog posts. -->
 <p><strong>Tip</strong>: Create separate Safari windows in different workspaces. <br/>
 <em>Using workspaces, I can swipe between &lsquo;sets&rsquo; of tabs.</em>
 <em>During development, if I want to keep any additional tabs for a project, they
-may be saved in a Safari bookmarks folder with a project specific name.
+may be saved in a new Safari bookmarks folder with a project specific name.
 See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
 
-<h3>Open a tab set in window #1:</h3>
+<h3>Open a bookmark tab set in window #1:</h3>
 
 <!-- more -->
 
@@ -769,7 +770,7 @@ See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
 </ul>
 
 
-<h3>Open a tab set in window #2:</h3>
+<h3>Open a bookmark tab set in window #2:</h3>
 
 <p><em>Default Safari bookmark folder name &lsquo;RailsDev #2&rsquo;</em></p>
 
@@ -790,7 +791,7 @@ See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
 </ul>
 
 
-<h3>Open a tab set in window #3:</h3>
+<h3>Open a bookmark tab set in window #3:</h3>
 
 <p><em>Default Safari bookmark folder name &lsquo;RailsDev #3&rsquo;</em></p>
 
@@ -827,9 +828,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>It&rsquo;s not that natural for developers to do design, but it helps make things look and feel a lot more finished, even when they&rsquo;re not.  A little help from a few design related sites goes a long way.</p>
 
 <!-- /Post description -->
 
@@ -843,6 +842,8 @@ summary on the index page for the blog posts. -->
 <li><a href="http://24ways.org/2012/how-to-make-your-site-look-half-decent/">How to Make Your Site Look Half-Decent in Half an Hour</a></li>
 </ul>
 
+
+<p><em>I&rsquo;ll add to this list as I come across anything new or better</em></p>
 ]]></content>
   </entry>
   
@@ -860,9 +861,9 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
+<p>My guide to setting up a rails app from scratch&hellip;</p>
 
+<p><em>Current known to work with at least Ruby 2.1.1 and Rails 4.0.3</em></p>
 
 <!-- /Post description -->
 
@@ -1450,9 +1451,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>Octopress appears to have some issues rendering its codeblocks.</p>
 
 <!-- /Post description -->
 
@@ -1552,17 +1551,13 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>A modified copy of the <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
 
 <!-- /Post description -->
 
 
 <!-- more -->
 
-
-<p>See <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
 
 <p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber&rsquo;s original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
 
@@ -2161,7 +2156,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<p>Google serach not returning any results for Octopress&rsquo;s built-in search field?</p>
+<p>Google search not returning any results for Octopress&rsquo;s built-in search field?</p>
 
 <!-- /Post description -->
 
@@ -2187,9 +2182,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>Octopress allows theme&rsquo;s to be installed&hellip;</p>
 
 <!-- /Post description -->
 
@@ -2197,9 +2190,9 @@ summary on the index page for the blog posts. -->
 <!-- more -->
 
 
-<p>From the root directory:</p>
+<p>From the Octopress root directory:</p>
 
-<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
+<p>Put any new themes in the <code>.themes</code> directory i.e:</p>
 
 <pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
 </code></pre>
@@ -2230,9 +2223,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>My notes on Octopress, install and basic usage.</p>
 
 <!-- /Post description -->
 
@@ -2368,15 +2359,19 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>I found a really cool Dropbox app to use for a blog. It uses markdown for writing but doesn&rsquo;t do syntax highlighting, so not much use for me.</p>
 
 <!-- /Post description -->
 
 
 <!-- more -->
 
+
+<p>Anyway, it has a nice <a href="http://scriptogr.am/">sign-in page</a> which of course allows a Dropbox OAuth login. My page is listed at <a href="http://scriptogr.am/timecode/post/my-only-wish">scriptogr.am/timecode</a>.</p>
+
+<p>Below is the &lsquo;Getting Started&rsquo; markdown that they provide so that I can use it as a reference.</p>
+
+<hr />
 
 <p>Date: 2014-03-13 11:00
 Title: This is your blog, delivered by scriptogr.am</p>

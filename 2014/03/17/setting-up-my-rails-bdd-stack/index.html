@@ -7,7 +7,7 @@
 	<meta name="author" content="Rob Playford">
 
 	
-	<meta name="description" content="My guide to setting up a BDD stack for a rails app&hellip; I initially followed this Rails 4 BDD article, however, I&rsquo;ve had to make a lot of &hellip;">
+	<meta name="description" content="My guide to setting up a BDD stack for a rails app&hellip; I initially followed this Rails 4 BDD article, however, I&rsquo;ve made a lot of changes &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,19 +92,20 @@
 
 <p>My guide to setting up a BDD stack for a rails app&hellip;</p>
 
-<p>I initially followed this <a href="https://semaphoreapp.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html">Rails 4 BDD article</a>, however, I&rsquo;ve had to make a lot of changes and additions to get things how I want them.</p>
-
-<p>Other useful bits of infornation discovered along the way came from articles <a href="http://www.startuprocket.com/introduction-to-app-development">Introduction to App Development</a> and <a href="http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit">How to setup a Rails app for Test-Driven- and Behavior-Driven Development with Rspec and Capybara-Webkit</a>.</p>
-
 <!-- /Post description -->
 
 
 <!-- more -->
 
 
-<p><strong>Note</strong>: The following steps describe the install of individual parts of the stack. It&rsquo;s best to follow the order as shown.</p>
+<p>I initially followed this <a href="https://semaphoreapp.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html">Rails 4 BDD article</a>, however, I&rsquo;ve made a lot of changes to get things how I want them.</p>
 
-<p><em>See Summary at end for &lsquo;all-at-once&rsquo; install</em></p>
+<p><em>Other useful bits of information discovered along the way came from articles <a href="http://www.startuprocket.com/introduction-to-app-development">Introduction to App Development</a> and <a href="http://www.startuprocket.com/blog/how-to-setup-a-rails-app-for-test-driven-and-behavior-driven-development-with-rspec-and-capybara-webkit">How to setup a Rails app for Test-Driven- and Behavior-Driven Development with Rspec and Capybara-Webkit</a>.</em></p>
+
+<h2>Install Of Individual Components</h2>
+
+<p><strong>Note</strong>: <em>See <a href="#summary">Summary</a> at end for &lsquo;all-at-once&rsquo; install</em> <br/>
+The following steps describe the install of individual parts of the stack. It&rsquo;s best to follow the order as shown.</p>
 
 <h3>INSTALL RSpec</h3>
 
@@ -137,7 +138,7 @@ end
 
 <h3>INSTALL shoulda-matchers</h3>
 
-<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superflous.</em></p>
+<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superfluous.</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -153,7 +154,7 @@ end
 
 <h3>INSTALL Factory Girl</h3>
 
-<p>Factory Girl is “a library for setting up Ruby objects as test data” or more precisely it is a fixtures replacement. <em>See <a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Factory Girl docs</a> for useage.</em></p>
+<p>Factory Girl is &ldquo;a library for setting up Ruby objects as test data&rdquo; or more precisely it is a fixtures replacement. <em>See <a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md">Factory Girl docs</a> for usage.</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -580,7 +581,9 @@ end
 <em>See <a href="https://github.com/guard/guard-cucumber">guard-cucumber</a></em>  <br/>
 <em>See <a href="https://github.com/jc00ke/guard-puma">guard-puma</a></em></p>
 
-<h2>SUMMARY</h2>
+<p><a name="summary"></a></p>
+
+<h2>Summary</h2>
 
 <p><em>Install RSpec, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
 

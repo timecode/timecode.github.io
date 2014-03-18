@@ -2,57 +2,57 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/13/scriptogram/</loc>
-        <lastmod>2014-03-17T18:48:43+00:00</lastmod>
+        <lastmod>2014-03-18T13:19:31+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/14/octopress-notes/</loc>
-        <lastmod>2014-03-18T08:41:31+00:00</lastmod>
+        <lastmod>2014-03-18T13:24:41+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/14/new-ocotopress-themes/</loc>
-        <lastmod>2014-03-17T16:28:42+00:00</lastmod>
+        <lastmod>2014-03-18T13:27:00+00:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.shadowcryptic.com/2014/03/14/get-google-search-working-on-octopress-site/
         </loc>
-        <lastmod>2014-03-18T10:23:39+00:00</lastmod>
+        <lastmod>2014-03-18T13:27:36+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/15/markdown-cheatsheet/</loc>
-        <lastmod>2014-03-17T16:28:29+00:00</lastmod>
+        <lastmod>2014-03-18T13:23:54+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/16/markdown-notes/</loc>
-        <lastmod>2014-03-17T16:28:20+00:00</lastmod>
+        <lastmod>2014-03-18T13:27:19+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/16/creating-a-new-heroku-rails-4-app/</loc>
-        <lastmod>2014-03-17T16:28:24+00:00</lastmod>
+        <lastmod>2014-03-18T13:23:15+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/17/making-web-pages-look-nice/</loc>
-        <lastmod>2014-03-17T16:28:09+00:00</lastmod>
+        <lastmod>2014-03-18T12:35:19+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/</loc>
-        <lastmod>2014-03-17T17:10:10+00:00</lastmod>
+        <lastmod>2014-03-18T12:30:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/17/setting-up-my-rails-bdd-stack/</loc>
-        <lastmod>2014-03-17T20:53:51+00:00</lastmod>
+        <lastmod>2014-03-18T12:52:56+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/2014/03/18/add-cucumber-support-to-sublime-text/</loc>
-        <lastmod>2014-03-18T12:17:37+00:00</lastmod>
+        <lastmod>2014-03-18T13:19:19+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/archive/</loc>
-        <lastmod>2014-03-18T12:17:37+00:00</lastmod>
+        <lastmod>2014-03-18T13:27:36+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/</loc>
-        <lastmod>2014-03-18T12:17:37+00:00</lastmod>
+        <lastmod>2014-03-18T13:27:36+00:00</lastmod>
     </url>
     <url>
         <loc>http://blog.shadowcryptic.com/my-rails-dev-setup/</loc>

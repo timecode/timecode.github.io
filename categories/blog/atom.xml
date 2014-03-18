@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/blog/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-18T12:17:37+00:00</updated>
+  <updated>2014-03-18T13:27:37+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -27,7 +27,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<p>Google serach not returning any results for Octopress&rsquo;s built-in search field?</p>
+<p>Google search not returning any results for Octopress&rsquo;s built-in search field?</p>
 
 <!-- /Post description -->
 
@@ -53,9 +53,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>Octopress allows theme&rsquo;s to be installed&hellip;</p>
 
 <!-- /Post description -->
 
@@ -63,9 +61,9 @@ summary on the index page for the blog posts. -->
 <!-- more -->
 
 
-<p>From the root directory:</p>
+<p>From the Octopress root directory:</p>
 
-<p>Put any new themes in the <code>.themes</code> directory i.e,</p>
+<p>Put any new themes in the <code>.themes</code> directory i.e:</p>
 
 <pre><code>$ git clone git://github.com/tommy351/Octopress-Theme-Slash.git .themes/slash
 </code></pre>
@@ -96,9 +94,7 @@ or online at [dillinger.io](http://dillinger.io) -->
 <!-- Post description -->
 
 
-<!-- Start the post with a brief description or introduction that will appear as the
-summary on the index page for the blog posts. -->
-
+<p>My notes on Octopress, install and basic usage.</p>
 
 <!-- /Post description -->
 
@@ -209,6 +205,139 @@ $ git push origin source
 <li><a href="http://octopress.org/docs/blogging/code/">Sharing Code Snippets</a></li>
 <li><a href="http://www.w3schools.com/charsets/ref_utf_basic_latin.asp">HTML Unicode UTF-8</a></li>
 </ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Scriptogram]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/13/scriptogram/"/>
+    <updated>2014-03-13T11:00:00+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/13/scriptogram</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
+or online at [dillinger.io](http://dillinger.io) -->
+
+
+
+
+<!-- Post description -->
+
+
+<p>I found a really cool Dropbox app to use for a blog. It uses markdown for writing but doesn&rsquo;t do syntax highlighting, so not much use for me.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Anyway, it has a nice <a href="http://scriptogr.am/">sign-in page</a> which of course allows a Dropbox OAuth login. My page is listed at <a href="http://scriptogr.am/timecode/post/my-only-wish">scriptogr.am/timecode</a>.</p>
+
+<p>Below is the &lsquo;Getting Started&rsquo; markdown that they provide so that I can use it as a reference.</p>
+
+<hr />
+
+<p>Date: 2014-03-13 11:00
+Title: This is your blog, delivered by scriptogr.am</p>
+
+<p>Thank you for using scriptogr.am. We hope you’ll enjoy the app. It’s designed to be fast, simple and to get the most creativity out of you.</p>
+
+<p>scriptogr.am uses <a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>, a lightweight markup language, originally created by <a href="http://daringfireball.net/" title="Daring Fireball">John Gruber</a> and <a href="http://www.aaronsw.com/" title="Aaron Swartz">Aaron Swartz</a>. Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML). See the <a href="http://daringfireball.net/projects/markdown/syntax" title="Markdown syntax">Syntax</a> page for details pertaining to Markdown’s formatting syntax. You can try it out, right now, using the online <a href="http://daringfireball.net/projects/markdown/dingus" title="Dingus">Dingus</a>.
+scriptogr.am has also implemented support for features currently not available with the plain Markdown syntax. Read more in the <a href="http://michelf.ca/projects/php-markdown/extra/" title="documentation">documentation</a>.
+Note that these features are experimental, so we can&rsquo;t guarantee that they will always remain.</p>
+
+<h1>Getting started</h1>
+
+<p>After connecting your Dropbox account to scriptogr.am, some necessary files and folders are added to your Dropbox at <code>Apps/scriptogram</code>. First the <em>GET_STARTED.txt</em> text file that pretty much explains the exact same as what you’re reading now. Next, we’ve added a <code>posts</code> folder. This is where you add your blog <em>post</em> (&amp; <em>page</em>) files. These files are plain textfiles, but needs to be saved with the .md (markdown) extension like this: <em>yourfile.md</em></p>
+
+<p><img src="http://dl.dropbox.com/u/35476/_scriptogram/folder.png" alt="" /></p>
+
+<p>Please use standard, non foreign filenames. Dropbox sometimes have problem syncing filenames that contains invalid HTML characters.
+We’ve added a post example page (this file) there for you to get familiar with.</p>
+
+<h2>The template data</h2>
+
+<p>All files needs to contain &ldquo;front block&rdquo;. The front block must be the first thing in the file and takes the form of:</p>
+
+<pre><code>Date: 2012-04-17
+Title: My first post
+</code></pre>
+
+<p>You can set any of the predefined variables (see below for a reference). But, the <em>Title</em> is required. Without the title, the system will fail.</p>
+
+<h3>Predefined global variables</h3>
+
+<p><em>All the variable names below are case-sensitive:</em></p>
+
+<p><code>Required:</code></p>
+
+<pre><code>Title
+</code></pre>
+
+<p>The title of your post (or page)</p>
+
+<p><code>Not required, but close to:</code></p>
+
+<pre><code>Date
+</code></pre>
+
+<p>The following date format is the correct one to use: <em>2011-12-31 12:31</em> or <em>2011-12-31</em>.
+(The <em>Date</em> variable can be used to ensure correct sorting of posts.)</p>
+
+<p><code>Optional:</code></p>
+
+<pre><code>Published
+</code></pre>
+
+<p>Set to ’false’ if you don’t want a post to show up when the site is generated.</p>
+
+<pre><code>Type
+</code></pre>
+
+<p>Set to ’page’ if you wan’t the post to act as a ’page’ instead of a ’post’.</p>
+
+<pre><code>Slug
+</code></pre>
+
+<p>Custom permalink (replaces the auto generated url based on the &ldquo;Title:&rdquo; variable), especially useful if titles tend to be long or they change frequently. E.g ’my-custom-permalink-url’</p>
+
+<pre><code>Link
+</code></pre>
+
+<p>Links the &ldquo;post&rdquo; or &ldquo;page&rdquo; title to an external source. E.g ’<a href="http://google.com%E2%80%99">http://google.com%E2%80%99</a></p>
+
+<pre><code>Tags
+</code></pre>
+
+<p>Add tags to your posts and pages. Comma separated words. Once added, scriptogr.am will transform all tags to valid basic HTML characters.</p>
+
+<pre><code>Excerpt
+</code></pre>
+
+<p>Add an excerpt<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> to your post or page.</p>
+
+<h2>Difference between ’posts’ and ’pages’</h2>
+
+<p>A <code>post</code> is a blog post.</p>
+
+<p>A <code>page</code> is a similar as a <em>post</em>, but generates a link visible in the <em>menu</em> on your site that will lean to a page permalink.</p>
+
+<h2>Publishing your posts</h2>
+
+<p>This is simple. Just head to your admin panel and hit the ”Synchronize” button, or enable autosync in your settings. When logged in to scriptogr.am and visiting your own page, you’ll see the scriptogr.am logotype symbol on the top right of the browser window. This is the link that leads to your admin panel.</p>
+
+<h2>Published vs Draft</h2>
+
+<p>There are two ways to mark posts and pages as drafts or published. The first way is to use the draft folder. Everything you put here will be treated as draft, and everything you put direct under the posts folder will be treated as published. The ”Publish” and ”Draft” buttons in the dashboard handles these file locations for you. You can also use the Published variable, mentioned above. The Published variable will ALWAYS take precedence over the file location.</p>
+
+<p><strong>Finally,</strong> happy posting. If you have any questions, suggestions or thoughts just drop us an <a href="mailto:info@scriptogr.am">e-mail</a> at any time.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>An <a href="http://en.wikipedia.org/wiki/Excerpt" title="Excerpt on Wikipedia">excerpt</a> is a relatively small sample passage from a longer work, such as a book or article.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
 
 ]]></content>
   </entry>

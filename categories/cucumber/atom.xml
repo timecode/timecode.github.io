@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Cucumber | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/cucumber/atom.xml" rel="self"/>
+  <link href="http://blog.shadowcryptic.com/"/>
+  <updated>2014-03-18T13:27:37+00:00</updated>
+  <id>http://blog.shadowcryptic.com/</id>
+  <author>
+    <name><![CDATA[Rob Playford]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Add Cucumber Support to Sublime Text]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/18/add-cucumber-support-to-sublime-text/"/>
+    <updated>2014-03-18T12:02:27+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/18/add-cucumber-support-to-sublime-text</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>Sublime Text doesn&rsquo;t have out of the box support for Cucumber (Gherkin) syntax highlighting. It&rsquo;s simple enough to add though.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Add the <a href="https://github.com/npverni/cucumber-sublime2-bundle">cucumber-sublime2-bundle</a> i.e.:</p>
+
+<pre><code>$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+$ git clone git://github.com/npverni/cucumber-sublime2-bundle.git Cucumber
+</code></pre>
+
+<p>This bundle provides syntax highlighting for both Cucumber Features (Gherkin) and Cucumber Steps. For some reason, comment toggling doesn&rsquo;t appear to work with Gherkin formatting so an additional file is required (as discovered in <a href="https://gist.github.com/unixmonkey/864839/#comment-85069">this gist</a>). To remedy the situation, add a file <code>Comments.tmPreferences</code> to the Cucumber package directory at <code>~/Library/Application Support/Sublime Text 3/Packages/Cucumber/</code>, with the following contents:</p>
+
+<p>``` xml
+&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+&lt;!DOCTYPE plist PUBLIC &ldquo;&ndash;//Apple Computer//DTD PLIST 1.0//EN&rdquo; &ldquo;<a href="http://www.apple.com/DTDs/PropertyList-1.0.dtd">http://www.apple.com/DTDs/PropertyList-1.0.dtd</a>&rdquo;>
+<plist version="1.0">
+<dict></p>
+
+<pre><code>&lt;key&gt;name&lt;/key&gt;
+&lt;string&gt;Comments&lt;/string&gt;
+&lt;key&gt;scope&lt;/key&gt;
+&lt;string&gt;text.gherkin.feature&lt;/string&gt;
+&lt;key&gt;settings&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;shellVariables&lt;/key&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;name&lt;/key&gt;
+            &lt;string&gt;TM_COMMENT_START&lt;/string&gt;
+            &lt;key&gt;value&lt;/key&gt;
+            &lt;string&gt;# &lt;/string&gt;
+        &lt;/dict&gt;
+        &lt;dict&gt;
+            &lt;key&gt;name&lt;/key&gt;
+            &lt;string&gt;TM_COMMENT_START_2&lt;/string&gt;
+            &lt;key&gt;value&lt;/key&gt;
+            &lt;string&gt;=begin
+</code></pre>
+
+<p></string></p>
+
+<pre><code>        &lt;/dict&gt;
+        &lt;dict&gt;
+            &lt;key&gt;name&lt;/key&gt;
+            &lt;string&gt;TM_COMMENT_END_2&lt;/string&gt;
+            &lt;key&gt;value&lt;/key&gt;
+            &lt;string&gt;=end
+</code></pre>
+
+<p></string></p>
+
+<pre><code>        &lt;/dict&gt;
+    &lt;/array&gt;
+&lt;/dict&gt;
+&lt;key&gt;uuid&lt;/key&gt;
+&lt;string&gt;98793a40-e7e7-473a-89ad-74d872ad3a3b&lt;/string&gt;
+</code></pre>
+
+<p></dict>
+</plist>
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
