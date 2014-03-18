@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-18T11:00:27+00:00</updated>
+  <updated>2014-03-18T12:17:37+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -12,6 +12,114 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[add cucumber support to sublime text]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/18/add-cucumber-support-to-sublime-text/"/>
+    <updated>2014-03-18T12:02:27+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/18/add-cucumber-support-to-sublime-text</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>Sublime Text doesn&rsquo;t have out of the box support for Cucumber (Gherkin) syntax highlighting. It&rsquo;s simple enough to add though.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>Add the <a href="https://github.com/npverni/cucumber-sublime2-bundle">cucumber-sublime2-bundle</a> i.e.:</p>
+
+<pre><code>$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+$ git clone git://github.com/npverni/cucumber-sublime2-bundle.git Cucumber
+</code></pre>
+
+<p>This bundle provides syntax highlighting for both Cucumber Features (Gherkin) and Cucumber Steps. For some reason, comment toggling doesn&rsquo;t appear to work with Gherkin formatting so an additional file is required (as discovered in <a href="https://gist.github.com/unixmonkey/864839/#comment-85069">this gist</a>). To remedy the situation, add a file <code>Comments.tmPreferences</code> to the Cucumber package directory at <code>~/Library/Application Support/Sublime Text 3/Packages/Cucumber/</code>, with the following contents:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;dict&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;string&gt;</span>Comments<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;string&gt;</span>text.gherkin.feature<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;dict&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;array&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;dict&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span># <span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/dict&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;dict&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span>TM_COMMENT_START_2<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span>=begin
+</span><span class='line'><span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/dict&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;dict&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;string&gt;</span>=end
+</span><span class='line'><span class="nt">&lt;/string&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/dict&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/array&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/dict&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;string&gt;</span>98793a40-e7e7-473a-89ad-74d872ad3a3b<span class="nt">&lt;/string&gt;</span>
+</span><span class='line'><span class="nt">&lt;/dict&gt;</span>
+</span><span class='line'><span class="nt">&lt;/plist&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[setting up my rails BDD stack]]></title>
