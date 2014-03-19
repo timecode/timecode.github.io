@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sublime | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/sublime/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-19T00:47:50+00:00</updated>
+  <updated>2014-03-19T02:28:30+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -60,6 +60,52 @@
 <pre><code>$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 </code></pre>
+
+<p><strong>Note 1</strong>: If using rvm, set the package to automatically check for rvm environment variables:</p>
+
+<ol>
+<li><p> In Sublime Text, go to Preferences > Browse Packages</p></li>
+<li><p> Open the file <code>RubyTest/RubyTest.sublime-settings</code></p></li>
+<li><p> Find the line:</p>
+
+<pre><code>"check_for_rvm": false,
+</code></pre>
+
+<p>and change it to:</p>
+
+<pre><code>"check_for_rvm": true,
+</code></pre>
+
+<p>save the change!</p></li>
+</ol>
+
+
+<p><strong>Note 2</strong>: If using spring, set the package to automatically include spring before running tests:</p>
+
+<ol>
+<li><p> In Sublime Text, go to Preferences > Browse Packages</p></li>
+<li><p> Open the file <code>RubyTest/RubyTest.sublime-settings</code></p></li>
+<li><p> Find the lines:</p>
+
+<pre><code>"run_cucumber_command": "cucumber {relative_path}",
+"run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
+
+"run_rspec_command": "rspec {relative_path}",
+"run_single_rspec_command": "rspec {relative_path} -l{line_number}",
+</code></pre>
+
+<p>and change them to:</p>
+
+<pre><code>"run_cucumber_command": "spring cucumber {relative_path}",
+"run_single_cucumber_command": "spring cucumber {relative_path} -l{line_number}",
+
+"run_rspec_command": "spring rspec {relative_path}",
+"run_single_rspec_command": "spring rspec {relative_path} -l{line_number}",
+</code></pre>
+
+<p>save the change!</p></li>
+</ol>
+
 
 <p>This now allows:</p>
 
