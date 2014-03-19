@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dev | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/dev/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-18T15:32:26+00:00</updated>
+  <updated>2014-03-19T00:47:50+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Enhancing Sublime Text]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text/"/>
+    <updated>2014-03-19T00:30:49+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>There&rsquo;s a whole bunch of extras mentioned at the <a href="https://github.com/mhartl/rails_tutorial_sublime_text">Rails Tutorial Sublime Text setup</a> page for enhancing Sublime Text.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p><em>I&rsquo;ve yet to verify if and how they all work.</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails Development Bookmarks]]></title>

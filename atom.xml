@@ -4,7 +4,7 @@
   <title><![CDATA[shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-18T15:32:26+00:00</updated>
+  <updated>2014-03-19T00:47:50+00:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[enhancing sublime text]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text/"/>
+    <updated>2014-03-19T00:30:49+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>There&rsquo;s a whole bunch of extras mentioned at the <a href="https://github.com/mhartl/rails_tutorial_sublime_text">Rails Tutorial Sublime Text setup</a> page for enhancing Sublime Text.</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p><em>I&rsquo;ve yet to verify if and how they all work.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[run tests from sublime text]]></title>
+    <link href="http://blog.shadowcryptic.com/2014/03/19/run-tests-from-sublime-text/"/>
+    <updated>2014-03-19T00:04:01+00:00</updated>
+    <id>http://blog.shadowcryptic.com/2014/03/19/run-tests-from-sublime-text</id>
+    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>Need to run a single test, last test again, or all tests in a file, directly from Sublime Text?</p>
+
+<p>Install a set of helper commands as detailed in <a href="http://ruby.railstutorial.org/chapters/static-pages#sec-tests_inside_sublime_text">Michael Hartl&rsquo;s &lsquo;Ruby on Rails Tutorial&rsquo;</a>&hellip;</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<pre><code>$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+$ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
+</code></pre>
+
+<p>This now allows:</p>
+
+<ul>
+<li>Command-Shift-R: run a single test (if run on an <code>it</code> block) or group of tests (if run on a <code>describe</code> block)</li>
+<li>Command-Shift-E: run the last test(s)</li>
+<li>Command-Shift-T: run all the tests in current file</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[add cucumber support to sublime text]]></title>
