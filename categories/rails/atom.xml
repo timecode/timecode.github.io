@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-03-19T08:21:10+00:00</updated>
+  <updated>2014-03-31T17:54:49+01:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -66,18 +66,20 @@ $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 
 <pre><code>"run_cucumber_command": "cucumber {relative_path}",
 "run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
-
-"run_rspec_command": "rspec {relative_path}",
-"run_single_rspec_command": "rspec {relative_path} -l{line_number}",
+.
+.
+.
+"check_for_spring": false,
 </code></pre>
 
 <p>and change them to:</p>
 
-<pre><code>"run_cucumber_command": "spring cucumber {relative_path}",
-"run_single_cucumber_command": "spring cucumber {relative_path} -l{line_number}",
-
-"run_rspec_command": "spring rspec {relative_path}",
-"run_single_rspec_command": "spring rspec {relative_path} -l{line_number}",
+<pre><code>"run_cucumber_command": "cucumber {relative_path} --require features/",
+"run_single_cucumber_command": "cucumber {relative_path} -l{line_number} --require features/",
+.
+.
+.
+"check_for_spring": true,
 </code></pre>
 
 <p>save the change!</p></li>
@@ -89,7 +91,8 @@ $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 <ul>
 <li>Command-Shift-R: run a single test (if run on an <code>it</code> block) or group of tests (if run on a <code>describe</code> block)</li>
 <li>Command-Shift-E: run the last test(s)</li>
-<li>Command-Shift-T: run all the tests in current file</li>
+<li>Command-Shift-T: run all the tests in current file
+<em>These work for RSpec specs and Cucumber features</em></li>
 </ul>
 
 ]]></content>
@@ -128,7 +131,7 @@ The following steps describe the install of individual parts of the stack. It&rs
 <p>Add to <code>Gemfile</code>:</p>
 
 <pre><code>group :development, :test do
-gem 'rspec-rails', '~&gt; 2.0'
+  gem 'rspec-rails', '~&gt; 2.0'
 end
 </code></pre>
 
@@ -149,14 +152,38 @@ end
 
 <p>Edit the <code>.rspec</code> file and change the default formatting to:</p>
 
-<pre><code>--color --format doc
+<pre><code>--format doc
+--color
+</code></pre>
+
+<p><em>See Fuubar gem (below) for alternative formatting option</em></p>
+
+<h3>INSTALL Fuubar</h3>
+
+<p>Fuubar is an instafailing RSpec formatter that uses a progress bar instead of a string of letters and dots as feedback.
+Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'fuubar'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>To use Fuubar as the default formatter, edit the <code>.rspec</code> file to the following, however, it I like to leave regular rspec (from the command line) using the above mentioned &lsquo;doc&rsquo; formatter. <em>See Guard install (below) to have Guard use Fuubar as its default formatter though!</em> :</p>
+
+<pre><code>--format Fuubar
+--color
 </code></pre>
 
 <h3>INSTALL shoulda-matchers</h3>
 
-<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superfluous.</em></p>
-
-<p>Add to <code>Gemfile</code>:</p>
+<p>shoulda-matchers provide RSpec-compatible one-liners that test common Rails functionality. These tests would otherwise be much longer, more complex, and error-prone.
+* See <a href="https://github.com/thoughtbot/shoulda-matchers#usage">shoulda-matchers documentation</a>*
+Add to <code>Gemfile</code>:</p>
 
 <pre><code>group :test do
   gem 'shoulda-matchers'
@@ -533,7 +560,9 @@ end
 guard :rspec,
     all_on_start: false,
     all_after_pass: false,
-    cmd: 'time spring rspec --format progress' do
+    cmd: 'time spring rspec --format Fuubar --color' do
+    # if NOT uing Fuubar gem for formatting, use the following instead ...
+    # cmd: 'time spring rspec --format progress --color' do
 
   # https://github.com/guard/guard-rspec
 
@@ -601,7 +630,7 @@ end
 
 <h2>Summary</h2>
 
-<p><em>Install RSpec, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
+<p><em>Install RSpec, Fuubar, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -628,6 +657,7 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'fuubar'
 end
 </code></pre>
 
@@ -781,6 +811,7 @@ See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
 <li><a href="https://www.relishapp.com/rspec/rspec-core/v/3-0/docs">Core</a></li>
 <li><a href="https://www.relishapp.com/rspec/rspec-expectations/v/3-0/docs">Expectations</a></li>
 <li><a href="https://www.relishapp.com/rspec/rspec-mocks/v/3-0/docs">Mocks</a></li>
+<li><a href="http://betterspecs.org">Better Specs { rspec guidelines with ruby }</a></li>
 </ul>
 </li>
 </ul>
@@ -885,9 +916,6 @@ $ source .rvmrc
 
 <p>Create a <code>.powrc</code> file (if required):</p>
 
-<!--  -->
-
-
 <pre><code>cat &gt; .powrc &lt;&lt; EOF
 if [ -f "$rvm_path/scripts/rvm" ]; then
   source "$rvm_path/scripts/rvm"
@@ -898,10 +926,30 @@ EOF
 
 <p>Add a symlink so POW knows where to serve the project from:</p>
 
-<!--  -->
-
-
 <pre><code>$ ln -is `pwd` ~/.pow/${PWD##*/}
+</code></pre>
+
+<p><strong>Note</strong>: When Pow boots, it executes the <code>~/.powconfig</code> script if it&rsquo;s present. This script can be used to export environment variables that will override Pow&rsquo;s default settings.
+For example, to tell pow to kill idle applications after 5 minutes (300 seconds) and spawn 1 worker per app, add the following:</p>
+
+<pre><code>export POW_TIMEOUT=300
+export POW_WORKERS=1
+</code></pre>
+
+<p>*See the <a href="http://pow.cx/docs/configuration.html#section-5">Configuration class documentation</a> for a full list of changeable settings.</p>
+
+<p>Manually restart Pow after making changes to <code>~/.powconfig</code>. To tell Pow to quit and restart, touch the global restart.txt file:</p>
+
+<pre><code>$ touch ~/.pow/restart.txt
+</code></pre>
+
+<p>Alternatively, use OS X&rsquo;s Activity Monitor application. Find the pow process in the process listing, select it, and click the Quit Process button.</p>
+
+<p><strong>Note</strong>: Rails logs are available for POW served apps:</p>
+
+<pre><code>$ cd ~/Library/Logs/Pow/apps
+$ tail -f rails-app-name.log
+# or open in OS X's Console.app
 </code></pre>
 
 <h3>Setup Database(s)</h3>
@@ -921,6 +969,8 @@ port: 5432
 
 <pre><code>$ rake db:create:all
 </code></pre>
+
+<p><em><strong>Note</strong>: Heroku ignores database config files and so db configs need to be achieved via ENV variables</em></p>
 
 <h3>Add Initial Gems For Heroku</h3>
 
@@ -1145,6 +1195,13 @@ Git remote heroku added
 
 <p><em>Note: It is always a good idea to check to see if there are any warnings or errors in the output.</em></p>
 
+<p>Deploy code from another branch <br/>
+When working on a branch it can be deployed to heroku without having to merge it into the master!!!
+Say, you have a branch called <code>heroku-deploy</code> that is in a state to be tested, live on heroku &hellip;</p>
+
+<pre><code>$ git push heroku heroku-deploy:master
+</code></pre>
+
 <p>If everything went well, migrate the database</p>
 
 <pre><code>$ heroku run rake db:migrate
@@ -1171,6 +1228,8 @@ Git remote heroku added
 <li><p>To see how many hours an app has used, visit your <a href="https://dashboard.heroku.com/account">account page</a> and look at the current invoice. Under &lsquo;Billing/Current Usage&rsquo; click on &lsquo;details&rsquo;. The resulting invoice allows each app to be clicked on in order to view its &lsquo;Dyno-hours&rsquo; and other billing info.</p></li>
 <li><p>Heroku allows commands to be run on the remote end<br/>
 <code>$ heroku run</code> # <em>followed by whatever command is required</em></p></li>
+<li><p>Database configs are controlled via ENV variables. To set the pool size to 15, for example, use something like:
+<code>heroku config -s | awk '/^DATABASE_URL=/{print $0 "?pool=15"}' | xargs heroku config:add</code></p></li>
 </ul>
 
 
@@ -1217,7 +1276,7 @@ end
 
 <p><em>Alternatively, assign the <code>ENV["HEROKU_RELEASE_NAME"]</code> to a constant and use that throughout the app instead.</em></p>
 
-<h3>Change Server (If Required)</h3>
+<h3>Change Server (If required for multithreading etc)</h3>
 
 <p><em>Note: Webrick is the default, so to use a different web server&hellip;</em></p>
 

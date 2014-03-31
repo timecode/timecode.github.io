@@ -28,7 +28,7 @@
 <nav id="main-nav"><ul class="main">
 	<li><a href="/">Home</a></li>
   <!-- <li><a href="/posts/">Blog</a></li> -->
-	<li><a href="/archive/">Archive</a></li>
+  <li><a href="/archive/">Archive</a></li>
 </ul>
 </nav>
 <nav id="mobile-nav">
@@ -37,7 +37,7 @@
 		<div class="container"><ul class="main">
 	<li><a href="/">Home</a></li>
   <!-- <li><a href="/posts/">Blog</a></li> -->
-	<li><a href="/archive/">Archive</a></li>
+  <li><a href="/archive/">Archive</a></li>
 </ul>
 </div>
 	</div>
@@ -113,7 +113,7 @@ The following steps describe the install of individual parts of the stack. It&rs
 <p>Add to <code>Gemfile</code>:</p>
 
 <pre><code>group :development, :test do
-gem 'rspec-rails', '~&gt; 2.0'
+  gem 'rspec-rails', '~&gt; 2.0'
 end
 </code></pre>
 
@@ -134,14 +134,38 @@ end
 
 <p>Edit the <code>.rspec</code> file and change the default formatting to:</p>
 
-<pre><code>--color --format doc
+<pre><code>--format doc
+--color
+</code></pre>
+
+<p><em>See Fuubar gem (below) for alternative formatting option</em></p>
+
+<h3>INSTALL Fuubar</h3>
+
+<p>Fuubar is an instafailing RSpec formatter that uses a progress bar instead of a string of letters and dots as feedback.
+Add to <code>Gemfile</code>:</p>
+
+<pre><code>group :test do
+  gem 'fuubar'
+end
+</code></pre>
+
+<p>then run</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>To use Fuubar as the default formatter, edit the <code>.rspec</code> file to the following, however, it I like to leave regular rspec (from the command line) using the above mentioned &lsquo;doc&rsquo; formatter. <em>See Guard install (below) to have Guard use Fuubar as its default formatter though!</em> :</p>
+
+<pre><code>--format Fuubar
+--color
 </code></pre>
 
 <h3>INSTALL shoulda-matchers</h3>
 
-<p>shoulda-matchers lets us spec common Rails functionality, like validations and associations, with less code. <em><strong>Note</strong>: I&rsquo;m not sure how I&rsquo;m using these at present and they may be superfluous.</em></p>
-
-<p>Add to <code>Gemfile</code>:</p>
+<p>shoulda-matchers provide RSpec-compatible one-liners that test common Rails functionality. These tests would otherwise be much longer, more complex, and error-prone.
+* See <a href="https://github.com/thoughtbot/shoulda-matchers#usage">shoulda-matchers documentation</a>*
+Add to <code>Gemfile</code>:</p>
 
 <pre><code>group :test do
   gem 'shoulda-matchers'
@@ -518,7 +542,9 @@ end
 guard :rspec,
     all_on_start: false,
     all_after_pass: false,
-    cmd: 'time spring rspec --format progress' do
+    cmd: 'time spring rspec --format Fuubar --color' do
+    # if NOT uing Fuubar gem for formatting, use the following instead ...
+    # cmd: 'time spring rspec --format progress --color' do
 
   # https://github.com/guard/guard-rspec
 
@@ -586,7 +612,7 @@ end
 
 <h2>Summary</h2>
 
-<p><em>Install RSpec, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
+<p><em>Install RSpec, Fuubar, shoulda-matchers, Factory Girl, Cucumber, selenium-webdriver, SimpleCov, Spring, and Guard in one go</em></p>
 
 <p>Add to <code>Gemfile</code>:</p>
 
@@ -613,6 +639,7 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'fuubar'
 end
 </code></pre>
 
@@ -738,7 +765,7 @@ $ git push -u origin --all
 (function($){
 	$('.fancybox').fancybox();
 })(jQuery);
-</script> --> <!-- Delete or comment this line to disable Fancybox -->
+</script> Delete or comment this line to disable Fancybox -->
 
 
 

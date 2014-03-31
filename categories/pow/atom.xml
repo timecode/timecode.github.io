@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Dev | shadowcryptic#blog]]></title>
-  <link href="http://blog.shadowcryptic.com/categories/dev/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Pow | shadowcryptic#blog]]></title>
+  <link href="http://blog.shadowcryptic.com/categories/pow/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
   <updated>2014-03-31T17:54:49+01:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
@@ -12,115 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Enhancing Sublime Text]]></title>
-    <link href="http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text/"/>
-    <updated>2014-03-19T00:30:49+00:00</updated>
-    <id>http://blog.shadowcryptic.com/2014/03/19/enhancing-sublime-text</id>
-    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
-
-
-<!-- Post description -->
-
-
-<p>There&rsquo;s a whole bunch of extras mentioned at the <a href="https://github.com/mhartl/rails_tutorial_sublime_text">Rails Tutorial Sublime Text setup</a> page for enhancing Sublime Text.</p>
-
-<!-- /Post description -->
-
-
-<!-- more -->
-
-
-<p><em>I&rsquo;ve yet to verify if and how they all work.</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails Development Bookmarks]]></title>
-    <link href="http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks/"/>
-    <updated>2014-03-17T08:00:00+00:00</updated>
-    <id>http://blog.shadowcryptic.com/2014/03/17/rails-dev-bookmarks</id>
-    <content type="html"><![CDATA[<!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/)
-or online at [dillinger.io](http://dillinger.io) -->
-
-
-
-
-<!-- Post description -->
-
-
-<p>I have some preset set of tabs that I like to have open before I start developing.</p>
-
-<!-- /Post description -->
-
-
-<!-- more -->
-
-
-<p><strong>Tip</strong>: Create separate Safari windows in different workspaces. <br/>
-<em>Using workspaces, I can swipe between &lsquo;sets&rsquo; of tabs.</em>
-<em>During development, if I want to keep any additional tabs for a project, they
-may be saved in a new Safari bookmarks folder with a project specific name.
-See Safari > Bookmarks > Add Bookmarks For These x Tabs</em></p>
-
-<h3>Open a bookmark tab set in window #1:</h3>
-
-<!-- more -->
-
-
-<p><em>Default Safari bookmark folder name &lsquo;RailsDev #1&rsquo;</em></p>
-
-<ul>
-<li><a href="http://blog.shadowcryptic.com">My blog</a> (for my notes) <br/>
-<em>Any look-ups and research will all end up in this window.</em></li>
-</ul>
-
-
-<h3>Open a bookmark tab set in window #2:</h3>
-
-<p><em>Default Safari bookmark folder name &lsquo;RailsDev #2&rsquo;</em></p>
-
-<ul>
-<li><p><a href="https://dashboard.heroku.com/apps">Heroku dashboard</a></p></li>
-<li><p>Remote site (served by <a href="https://www.heroku.com/">Heroku</a>):</p>
-
-<pre><code>https://rails-app-name.herokuapp.com
-</code></pre></li>
-<li><p>Local site (served by <a href="http://pow.cx">POW</a>):</p>
-
-<pre><code>http://rails-app-name.dev
-</code></pre></li>
-<li><p>Simplecov results for current project:</p>
-
-<pre><code>file:///path-to-rails-app-directory/coverage/index.html
-</code></pre></li>
-</ul>
-
-
-<h3>Open a bookmark tab set in window #3:</h3>
-
-<p><em>Default Safari bookmark folder name &lsquo;RailsDev #3&rsquo;</em></p>
-
-<ul>
-<li><p><a href="http://api.rubyonrails.org/">Rails RDOC</a></p></li>
-<li><p><a href="https://github.com/jnicklas/capybara#the-dsl">Capybara</a></p></li>
-<li><p><a href="https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#getting-started">Factory Girl</a></p></li>
-<li><p><a href="http://faker.rubyforge.org/rdoc/">Faker</a></p></li>
-<li><p>RSpec</p>
-
-<ul>
-<li><a href="https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs">Rails</a></li>
-<li><a href="https://www.relishapp.com/rspec/rspec-core/v/3-0/docs">Core</a></li>
-<li><a href="https://www.relishapp.com/rspec/rspec-expectations/v/3-0/docs">Expectations</a></li>
-<li><a href="https://www.relishapp.com/rspec/rspec-mocks/v/3-0/docs">Mocks</a></li>
-<li><a href="http://betterspecs.org">Better Specs { rspec guidelines with ruby }</a></li>
-</ul>
-</li>
-</ul>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating a New Heroku Rails 4 App]]></title>

@@ -28,7 +28,7 @@
 <nav id="main-nav"><ul class="main">
 	<li><a href="/">Home</a></li>
   <!-- <li><a href="/posts/">Blog</a></li> -->
-	<li><a href="/archive/">Archive</a></li>
+  <li><a href="/archive/">Archive</a></li>
 </ul>
 </nav>
 <nav id="mobile-nav">
@@ -37,7 +37,7 @@
 		<div class="container"><ul class="main">
 	<li><a href="/">Home</a></li>
   <!-- <li><a href="/posts/">Blog</a></li> -->
-	<li><a href="/archive/">Archive</a></li>
+  <li><a href="/archive/">Archive</a></li>
 </ul>
 </div>
 	</div>
@@ -133,18 +133,20 @@ $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 
 <pre><code>"run_cucumber_command": "cucumber {relative_path}",
 "run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
-
-"run_rspec_command": "rspec {relative_path}",
-"run_single_rspec_command": "rspec {relative_path} -l{line_number}",
+.
+.
+.
+"check_for_spring": false,
 </code></pre>
 
 <p>and change them to:</p>
 
-<pre><code>"run_cucumber_command": "spring cucumber {relative_path}",
-"run_single_cucumber_command": "spring cucumber {relative_path} -l{line_number}",
-
-"run_rspec_command": "spring rspec {relative_path}",
-"run_single_rspec_command": "spring rspec {relative_path} -l{line_number}",
+<pre><code>"run_cucumber_command": "cucumber {relative_path} --require features/",
+"run_single_cucumber_command": "cucumber {relative_path} -l{line_number} --require features/",
+.
+.
+.
+"check_for_spring": true,
 </code></pre>
 
 <p>save the change!</p></li>
@@ -156,7 +158,8 @@ $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 <ul>
 <li>Command-Shift-R: run a single test (if run on an <code>it</code> block) or group of tests (if run on a <code>describe</code> block)</li>
 <li>Command-Shift-E: run the last test(s)</li>
-<li>Command-Shift-T: run all the tests in current file</li>
+<li>Command-Shift-T: run all the tests in current file
+<em>These work for RSpec specs and Cucumber features</em></li>
 </ul>
 
 </div>
@@ -212,7 +215,7 @@ $ git clone https://github.com/maltize/sublime-text-2-ruby-tests.git RubyTest
 (function($){
 	$('.fancybox').fancybox();
 })(jQuery);
-</script> --> <!-- Delete or comment this line to disable Fancybox -->
+</script> Delete or comment this line to disable Fancybox -->
 
 
 
