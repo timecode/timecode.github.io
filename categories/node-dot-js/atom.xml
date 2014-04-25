@@ -4,7 +4,7 @@
   <title><![CDATA[Category: node.js | shadowcryptic#blog]]></title>
   <link href="http://blog.shadowcryptic.com/categories/node-dot-js/atom.xml" rel="self"/>
   <link href="http://blog.shadowcryptic.com/"/>
-  <updated>2014-04-25T14:42:48+01:00</updated>
+  <updated>2014-04-25T17:05:08+01:00</updated>
   <id>http://blog.shadowcryptic.com/</id>
   <author>
     <name><![CDATA[Rob Playford]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Adding Angularjs to My Rails Bdd Stack]]></title>
+    <title type="html"><![CDATA[Adding AngularJS to My Rails BDD Stack]]></title>
     <link href="http://blog.shadowcryptic.com/2014/04/25/adding-angularjs-to-my-rails-bdd-stack/"/>
     <updated>2014-04-25T13:57:15+01:00</updated>
     <id>http://blog.shadowcryptic.com/2014/04/25/adding-angularjs-to-my-rails-bdd-stack</id>
@@ -34,13 +34,13 @@
 
 <p>After checking out Jason Swett&rsquo;s article <a href="https://www.honeybadger.io/blog/2013/12/11/beginners-guide-to-angular-js-rails">Getting Started with AngularJS and Rails 4</a>, I discovered a few issues (the guide was already out of date), so what follows is my verified update.</p>
 
-<p><em>Other useful bits of information discovered along the way came from Adam Anderson&rsquo;s series <a href="http://asanderson.org/posts/2013/06/03/bootstrapping-angular-rails-part-1.html">Bootstrapping an AngularJS app in Rails 4.0</a></em></p>
+<p><em>Other useful bits of information discovered along the way came from Adam Anderson&rsquo;s series <a href="http://asanderson.org/posts/2013/06/03/bootstrapping-angular-rails-part-1.html">Bootstrapping an AngularJS app in Rails 4.0</a> and Joel Hooks' <a href="https://egghead.io/lessons/angularjs-getting-started-with-protractor">Getting Started With Protractor</a> intro video.</em></p>
 
 <h2>Install Of Individual Components</h2>
 
 <p>The following steps describe the install of individual parts of the stack. Follow the order described.</p>
 
-<h3>INSTALL Node.js</h3>
+<h3>Node.js</h3>
 
 <p>Visit <a href="http://nodejs.org/">nodejs.org</a>, download and install the latest pkg &hellip;</p>
 
@@ -68,9 +68,11 @@ undefined
 </ul>
 
 
-<h3>INSTALL Karma</h3>
+<h3>Karma</h3>
 
-<p>Karma is the &lsquo;Spectacular Test Runner for JavaScript&rsquo;. It allows JavaScript code to be executed in (multiple) real browsers. Karma simply launches an HTTP server and watches for changes to files and test specs (running tests whenever anything changes). There are plugins for most of the common testing frameworks, of which I&rsquo;ll be using Jasmine and ng-scenario.</p>
+<p>Karma is the &lsquo;Spectacular Test Runner for JavaScript&rsquo;. It allows JavaScript code to be executed in (multiple) real browsers. Karma simply launches an HTTP server and watches for changes to files and test specs (running tests whenever anything changes). There are plugins for most of the common testing frameworks, of which I&rsquo;ll be using Jasmine and ng-scenario. <em><strong>Note</strong>: The Karma website mentions that it has primarily been designed for low level (unit) testing. For an AngularJS app, Karma can be used with the karma-ng-scenario plugin, however they recommend <a href="https://github.com/angular/protractor">Protractor</a> for high level testing. A similar situation to Cucumber and RSpec!</em></p>
+
+<h4>INSTALL</h4>
 
 <p>When working on a project, install Karma (and then any required plugins) locally in the project&rsquo;s directory:</p>
 
@@ -80,7 +82,7 @@ $ npm install karma-ng-scenario --save-dev
 
 <p>This will install everything into the current working directory (in a directory named <code>node_modules</code>) and also save any devDependencies (in <code>karma/package.json</code>), so that any other developers working on the project will only have to run <code>npm install</code> in order to get all the dependencies installed.</p>
 
-<h3>SETUP Karma</h3>
+<h4>SETUP</h4>
 
 <p>Once installed, the first thing to do is create karma&rsquo;s <a href="http://karma-runner.github.io/0.12/config/configuration-file.html">config file</a>:</p>
 
@@ -106,7 +108,7 @@ $ npm install karma-ng-scenario --save-dev
 },
 </code></pre>
 
-<h3>RUN Karma</h3>
+<h4>RUN</h4>
 
 <p>To set Karma off, watching and running tests in real browsers:</p>
 
@@ -115,7 +117,7 @@ $ npm install karma-ng-scenario --save-dev
 
 <p><strong>Note</strong>: There&rsquo;s no need to have guard running as well when in javascript TDD mode! Either kill it or set it in pause mode.</p>
 
-<h3>An example of a working config file is listed below:</h3>
+<h4>An example of a working config file is listed below:</h4>
 
 <pre><code>// Karma configuration
 // Generated on Fri Apr 25 2014 12:39:49 GMT+0100 (BST)
@@ -190,6 +192,126 @@ module.exports = function(config) {
   });
 };
 </code></pre>
+
+<h3>Istanbul</h3>
+
+<p>Istanbul is a JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests.</p>
+
+<pre><code>$ npm install istanbul
+$ npm install karma-coverage
+</code></pre>
+
+<p>Karma can generate code coverage using Istanbul. Configure up to three parts:</p>
+
+<ul>
+<li>preprocessor coverage (required)</li>
+<li>reporter coverage (required)</li>
+<li>reporter options (optional)</li>
+</ul>
+
+
+<p><strong>Preprocessor</strong> <br/>
+The preprocessor configures which files should be tested for coverage. For example, the following covers all files in the <code>app/assets/javascripts/angular/</code> directory.</p>
+
+<pre><code>preprocessors = {
+  'app/assets/javascripts/angular/*': ['coverage']      // TBC
+};
+</code></pre>
+
+<p>Do not, however, include the files that aren&rsquo;t directly related to the program, e.g. libraries, mocks, neither tests. This is a BAD example:</p>
+
+<pre><code>files = [
+  JASMINE,
+  JASMINE_ADAPTER,
+  'lib/*.js',
+  'test/*.js'
+];
+preprocessors = {
+  '**/*.js': 'coverage'
+};
+</code></pre>
+
+<p>In this example also JASMINE and JASMINE_ADAPTER get included but they shouldn&rsquo;t as these file are only for the test setup used and not for the program.</p>
+
+<p><strong>Reporter</strong><br/>
+To activate the coverage reporter add this to the configuration file.</p>
+
+<pre><code>reporters = ['coverage'];
+</code></pre>
+
+<p>This will create a coverage report for every browser that the tests are run in. In addition, it will create a JSON file that outputs the intermediate data.</p>
+
+<p><strong>Reporter Options</strong><br/>
+The reporter defaults to the following values.</p>
+
+<pre><code>coverageReporter = {
+  type : 'html',
+  dir : 'coverage/'
+}
+</code></pre>
+
+<h3>Protractor</h3>
+
+<p><a href="https://github.com/angular/protractor">Protractor</a> is an end to end test framework for AngularJS applications built on top of WebDriverJS. <br/>
+Protractor runs tests against an application running in a real browser, interacting with it as a user would.</p>
+
+<h4>INSTALL</h4>
+
+<p>Install protractor with:</p>
+
+<pre><code>$ npm install protractor
+</code></pre>
+
+<p>Install the selenium webdriver with</p>
+
+<pre><code>$ ./node_modules/protractor/bin/webdriver-manager update
+</code></pre>
+
+<h4>SETUP</h4>
+
+<p>Create a configuration file &ndash; an example with detailed comments is shown in <code>node_modules/protractor/referenceConf.js</code>. <br/>
+Copy and edit the configuration file to point to the project&rsquo;s test files.</p>
+
+<pre><code>$ cp node_modules/protractor/referenceConf.js protractor.conf.js
+</code></pre>
+
+<p>The edited file should contain something like the following&hellip;</p>
+
+<pre><code>// protractor.conf.js
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['spec/protractor_test_spec.js', 'spec/**/*_spec.js']
+}
+</code></pre>
+
+<h4>VERIFY</h4>
+
+<p>The setup can be verified by adding the following test:</p>
+
+<pre><code>// spec/protractor_test_spec.js
+describe('angularjs homepage', function() {
+  it('should greet the named user', function() {
+    browser.get('http://www.angularjs.org');
+
+    element(by.model('yourName')).sendKeys('Julie');
+
+    var greeting = element(by.binding('yourName'));
+
+    expect(greeting.getText()).toEqual('Hello Julie!');
+  });
+});
+</code></pre>
+
+<h4>RUN</h4>
+
+<p>Start a selenium webdriver and run protractor with</p>
+
+<pre><code>$ ./node_modules/protractor/bin/webdriver-manager start
+$ ./node_modules/protractor/bin/protractor
+</code></pre>
+
+<p>The runner exposes global variables <code>browser</code>, <code>by</code> and <code>element</code>. <br/>
+See <a href="https://github.com/angular/protractor/blob/master/docs/getting-started.md">getting started docs</a> to learn how to write a test.</p>
 ]]></content>
   </entry>
   
