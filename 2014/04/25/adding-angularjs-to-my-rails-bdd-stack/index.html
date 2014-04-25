@@ -1,0 +1,333 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>adding angularjs to my rails bdd stack - shadowcryptic#blog</title>
+	<meta name="author" content="Rob Playford">
+
+	
+	<meta name="description" content="My guide to including AngularJS in a rails app, the TDD way&hellip; After checking out Jason Swett&rsquo;s article Getting Started with AngularJS &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="shadowcryptic#blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">shadowcryptic#blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+  <li><a href="/archive/">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Home</a></li>
+  <!-- <li><a href="/posts/">Blog</a></li> -->
+  <li><a href="/archive/">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/+RobPlayford1?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/timecode" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/timecode" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:blog.shadowcryptic.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Adding Angularjs to My Rails Bdd Stack</h2>
+	<div class="entry-content"><!-- View or edit the markdown in this file using the [Mou app](http://mouapp.com/) or online at [dillinger.io](http://dillinger.io) -->
+
+
+<!-- Post description -->
+
+
+<p>My guide to including AngularJS in a rails app, the TDD way&hellip;</p>
+
+<!-- /Post description -->
+
+
+<!-- more -->
+
+
+<p>After checking out Jason Swett&rsquo;s article <a href="https://www.honeybadger.io/blog/2013/12/11/beginners-guide-to-angular-js-rails">Getting Started with AngularJS and Rails 4</a>, I discovered a few issues (the guide was already out of date), so what follows is my verified update.</p>
+
+<p><em>Other useful bits of information discovered along the way came from Adam Anderson&rsquo;s series <a href="http://asanderson.org/posts/2013/06/03/bootstrapping-angular-rails-part-1.html">Bootstrapping an AngularJS app in Rails 4.0</a></em></p>
+
+<h2>Install Of Individual Components</h2>
+
+<p>The following steps describe the install of individual parts of the stack. Follow the order described.</p>
+
+<h3>INSTALL Node.js</h3>
+
+<p>Visit <a href="http://nodejs.org/">nodejs.org</a>, download and install the latest pkg &hellip;</p>
+
+<p>After install check everything is ok by checking the version installed, or entering <code>$ node</code> at the command line (this will open a node javascript session):</p>
+
+<pre><code>$ node --version
+==&gt; v0.10.26
+
+$ node
+&gt; console.log('hello node’);
+hello node
+undefined
+&gt; 
+</code></pre>
+
+<p>To exit the node.js session, hit ‘control’ + ‘c’ twice.</p>
+
+<p><strong>Note</strong>: Additional packages may be installed for Node using Node&rsquo;s package manager.</p>
+
+<ul>
+<li>Use the command <code>$ npm search</code> to see a complete list of available packages.</li>
+<li>To install a package run <code>$ npm install package-name</code></li>
+<li>To list installed packages run <code>$ npm ls</code></li>
+<li>To upgrade npm packages <code>$ npm upgrade</code></li>
+</ul>
+
+
+<h3>INSTALL Karma</h3>
+
+<p>Karma is the &lsquo;Spectacular Test Runner for JavaScript&rsquo;. It allows JavaScript code to be executed in (multiple) real browsers. Karma simply launches an HTTP server and watches for changes to files and test specs (running tests whenever anything changes). There are plugins for most of the common testing frameworks, of which I&rsquo;ll be using Jasmine and ng-scenario.</p>
+
+<p>When working on a project, install Karma (and then any required plugins) locally in the project&rsquo;s directory:</p>
+
+<pre><code>$ npm install karma --save-dev
+$ npm install karma-ng-scenario --save-dev
+</code></pre>
+
+<p>This will install everything into the current working directory (in a directory named <code>node_modules</code>) and also save any devDependencies (in <code>karma/package.json</code>), so that any other developers working on the project will only have to run <code>npm install</code> in order to get all the dependencies installed.</p>
+
+<h3>SETUP Karma</h3>
+
+<p>Once installed, the first thing to do is create karma&rsquo;s <a href="http://karma-runner.github.io/0.12/config/configuration-file.html">config file</a>:</p>
+
+<pre><code>$ ./node_modules/karma/bin/karma init
+</code></pre>
+
+<p>This starts an interactive setup which is fairly self explanatory. However, the file structure used by the watcher may be best added manually afterwards. In the file <code>karma.conf.js</code> (at the top level of the project), add something like the following to the &lsquo;files&rsquo; array (being careful to ensure that scripts are loaded in any required order!)</p>
+
+<pre><code>files: [
+  'app/assets/javascripts/angular.js',
+  'app/assets/javascripts/angular-mocks.js',
+  'app/assets/javascripts/main.js.coffee',
+  'app/assets/javascripts/angular/controllers/AnIndexCtrl.js.coffee',
+  'app/assets/javascripts/angular/*',
+  'spec/**/*_spec.js*',
+],
+</code></pre>
+
+<p>Preprocessors for coffee script files (if using coffeescript) may also need to be described:</p>
+
+<pre><code>preprocessors: {
+  '**/*.coffee': ['coffee']
+},
+</code></pre>
+
+<h3>RUN Karma</h3>
+
+<p>To set Karma off, watching and running tests in real browsers:</p>
+
+<pre><code>$ ./node_modules/karma/bin/karma start
+</code></pre>
+
+<p><strong>Note</strong>: There&rsquo;s no need to have guard running as well when in javascript TDD mode! Either kill it or set it in pause mode.</p>
+
+<h3>An example of a working config file is listed below:</h3>
+
+<pre><code>// Karma configuration
+// Generated on Fri Apr 25 2014 12:39:49 GMT+0100 (BST)
+
+module.exports = function(config) {
+  config.set({
+
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: '',
+
+
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
+
+
+    // list of files / patterns to load in the browser
+    files: [
+      'app/assets/javascripts/angular.js',
+      'app/assets/javascripts/angular-mocks.js',
+      'app/assets/javascripts/main.js.coffee',
+      'app/assets/javascripts/angular/controllers/RestaurantIndexCtrl.js.coffee',
+      'app/assets/javascripts/angular/*',
+      'spec/**/*_spec.js*',
+    ],
+
+
+    // list of files to exclude
+    exclude: [
+
+    ],
+
+
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+      '**/*.coffee': ['coffee']
+    },
+
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress'],
+
+
+    // web server port
+    port: 9876,
+
+
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
+
+
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
+
+
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
+
+
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['Chrome', 'Firefox', 'Safari'],
+
+
+    // Continuous Integration mode
+    // if true, Karma captures browsers, runs the tests and exits
+    singleRun: false
+  });
+};
+</code></pre>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-25T13:57:15+01:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/categories/bdd/'>BDD</a>, <a class='category' href='/categories/tdd/'>TDD</a>, <a class='category' href='/categories/angularjs/'>angularjs</a>, <a class='category' href='/categories/node-dot-js/'>node.js</a>, <a class='category' href='/categories/rails/'>rails</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Rob Playford
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<!-- <script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-272698-8']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

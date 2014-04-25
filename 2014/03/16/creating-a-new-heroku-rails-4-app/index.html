@@ -433,10 +433,12 @@ $ git merge topic_branch_description
 
 <h3>Deploy To Heroku</h3>
 
-<pre><code>$ heroku create
+<pre><code>$ heroku create --region eu                 # region is optional
 http://crazy-heroku-name.herokuapp.com/ | git@heroku.com:crazy-heroku-name.git
 Git remote heroku added
 </code></pre>
+
+<p><em><strong>Note</strong>: Apps are deployed to the region specified <strong>at creation!</strong></em></p>
 
 <p>Verify that the heroku remote was added to your project by running</p>
 
@@ -445,10 +447,10 @@ Git remote heroku added
 
 <p>Rename app (if required)</p>
 
-<pre><code>$ heroku rename rails-app-name
+<pre><code>$ heroku rename rails-app-name-dev
 </code></pre>
 
-<p><em>Maybe choose <code>rails-app-name-dev</code> whilst the app is still in development?</em></p>
+<p><em>Choose <code>rails-app-name-dev</code> whilst the app is still in development!</em></p>
 
 <p>Deploy code</p>
 
@@ -488,10 +490,20 @@ Say, you have a branch called <code>heroku-deploy</code> that is in a state to b
 <li><p>A web dyno that is sleeping continues to accrue usage. To stop accruing usage on an app that is sleeping&hellip;<br/>
 <code>$ heroku ps:scale web=0</code> # scale to 0!</p></li>
 <li><p>To see how many hours an app has used, visit your <a href="https://dashboard.heroku.com/account">account page</a> and look at the current invoice. Under &lsquo;Billing/Current Usage&rsquo; click on &lsquo;details&rsquo;. The resulting invoice allows each app to be clicked on in order to view its &lsquo;Dyno-hours&rsquo; and other billing info.</p></li>
+<li><p>To see info about the Heroku app<br/>
+<code>$ heroku info</code></p></li>
+<li><p>The Heroku app can be restarted at any time with<br/>
+<code>$ heroku restart</code></p></li>
 <li><p>Heroku allows commands to be run on the remote end<br/>
 <code>$ heroku run</code> # <em>followed by whatever command is required</em></p></li>
-<li><p>Database configs are controlled via ENV variables. To set the pool size to 15, for example, use something like:
-<code>heroku config -s | awk '/^DATABASE_URL=/{print $0 "?pool=15"}' | xargs heroku config:add</code></p></li>
+<li><p>Heroku configs are controlled via ENV variables<br/>
+<code>$ heroku config</code></p></li>
+<li><p>To set the Database pool size config to 15, for example, use something like:<br/>
+<code>$ heroku config -s | awk '/^DATABASE_URL=/{print $0 "?pool=15"}' | xargs heroku config:add</code></p></li>
+<li><p>To view Database stats:<br/>
+<code>$ heroku pg</code></p></li>
+<li><p>See Heroku help for all other options<br/>
+<code>$ heroku help</code></p></li>
 </ul>
 
 
